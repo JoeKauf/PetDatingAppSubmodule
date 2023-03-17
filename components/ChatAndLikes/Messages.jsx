@@ -26,9 +26,7 @@ const Messages = ({ petData, navigation, email }) => {
     function setMessages(messages) {
         setChatMessages(messages);
     }
-
     
-
     chatMessages.forEach((pet, i) => {
         const image = { uri: pet.profilePicture };
         petMessages.push(

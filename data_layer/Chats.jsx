@@ -79,6 +79,7 @@ export function sendAMessage(message, chatId, senderId, userName, petId, shelter
     if (chatExists) {
         sendMessageToExistingChat(chatId, messagesRef, chatsRef, message, senderId, timestamp, userName)
     } else {
+        console.log("Create new chat")
         createNewChat(messagesRef, chatsRef, message, senderId, timestamp, userName, petId, shelterId, initializeChatId)
     }
 }
@@ -127,8 +128,8 @@ function createNewChat(messagesRef, chatsRef, message, senderId, timestamp, user
         .set({ messages: firebase.firestore.FieldValue.arrayUnion(messageData) })
         .then(() => {
             // Chat id to user chats
-            firebase.firestore().collection('Users').doc('1').update({ chats: firebase.firestore.FieldValue.arrayUnion(chatId.id) });
-            firebase.firestore().collection('Users').doc('test@gmail.com').update({ chats: firebase.firestore.FieldValue.arrayUnion(chatId.id) });
+            firebase.firestore().collection('Users').doc(shelterId).update({ chats: firebase.firestore.FieldValue.arrayUnion(chatId.id) });
+            firebase.firestore().collection('Users').doc(senderId).update({ chats: firebase.firestore.FieldValue.arrayUnion(chatId.id) });
             initializeChatId(chatId.id)
         })
     })
@@ -136,9 +137,10 @@ function createNewChat(messagesRef, chatsRef, message, senderId, timestamp, user
 
 export function getChats(userId, callback) {
     const usersRef = firebase.firestore().collection('Users').doc(userId);
-    
+
     usersRef.onSnapshot((doc) => {
         const chats = doc.data().chats;
+        
         if (chats) {
             getIndividualChatInfo(chats, callback);
         }
