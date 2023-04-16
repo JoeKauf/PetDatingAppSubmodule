@@ -23,9 +23,7 @@ const ShelterAnimals = ({ navigation }) => {
     }
 
     useEffect(() => {
-        console.log("Get Animals pre")
         getAnimalShelterPets(email, setCats, setDogs);
-        console.log("Get Animals post")
     }, [])
 
     return (

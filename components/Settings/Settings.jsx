@@ -32,7 +32,7 @@ function breedIdToArray() {
     const breedsList = state.query.type.isDog ? state.breeds.dog : state.breeds.cat
     const selectedBreedIds = state.query.type.isDog ? state.query.breed.dog : state.query.breed.cat 
     
-    const convertedIdToNames = selectedBreedIds.map((breedID) => breedsList[breedID].label)
+    const convertedIdToNames = selectedBreedIds.map((breedID) => breedsList[breedID - 1].label)
     return convertedIdToNames.length > 0 ? convertedIdToNames : ["All Breeds"];
 }
 

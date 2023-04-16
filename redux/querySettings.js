@@ -49,24 +49,24 @@ export const dogBreedSlice = createSlice({
         gender: {
             cat:
             {
-                male: true,
+                male: false,
                 female: true,
             },
             dog: {
-                male: true,
+                male: false,
                 female: true,
             }
         },
         friendlyWith: {
             cat: {
-                isKidFriendly: true,
-                isDogFriendly: true,
-                isCatFriendly: true,
+                isKidFriendly: false,
+                isDogFriendly: false,
+                isCatFriendly: false,
             },
             dog: {
-                isKidFriendly: true,
-                isDogFriendly: true,
-                isCatFriendly: true,
+                isKidFriendly: false,
+                isDogFriendly: false,
+                isCatFriendly: false,
             },
         },
         coat:[
@@ -87,8 +87,8 @@ export const dogBreedSlice = createSlice({
                 isSelected: true,
             },],
         houseTrained: {
-            cat: true,
-            dog: true,
+            cat: false,
+            dog: false,
         },
         size: {
             dog: [

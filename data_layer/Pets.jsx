@@ -2,7 +2,6 @@ import { firebase } from '../firebaseConfig'
 import { useSelector, useDispatch } from "react-redux";
 import { addPet } from '../redux/mypets';
 
-// import { getStorage, ref, uploadBytes } from "firebase/storage";
 // Helper function
 function getAge(dateString) {
   var now = new Date();
@@ -13,8 +12,8 @@ function getAge(dateString) {
   var dateNow = now.getDate();
 
   var dob = new Date(dateString.substring(6,10),
-                     dateString.substring(0,2)-1,                   
-                     dateString.substring(3,5)                  
+                     dateString.substring(0,2)-1,
+                     dateString.substring(3,5)
                      );
 
   var yearDob = dob.getYear();
@@ -472,11 +471,93 @@ function breedIdToString(breedArray, isDog) {
     return breedsString.length > 0 ? breedsString : "Mix";
 }
 
+function shouldPetBeShown(petData, queryData, dob, weight, breed) {
+    const isDog = queryData.type.isDog;
+    const houseTrainedFilter = isDog ? queryData.houseTrained.dog : queryData.houseTrained.cat;
+    const kidFriendlyFilter = isDog ? queryData.friendlyWith.dog.isKidFriendly : queryData.friendlyWith.cat.isKidFriendly;
+    const dogFriendlyFilter = isDog ? queryData.friendlyWith.dog.isDogFriendly : queryData.friendlyWith.cat.isDogFriendly;
+    const catFriendlyFilter = isDog ? queryData.friendlyWith.dog.isCatFriendly : queryData.friendlyWith.cat.isCatFriendly;
+    const maleFilter = isDog ? queryData.gender.dog.isMale : queryData.gender.cat.isMale;
+    const femaleFilter = isDog ? queryData.gender.dog.isFemale : queryData.gender.cat.isFemale;
+    const ageRange = isDog ? queryData.ageRange.dog : queryData.ageRange.cat;
+    const sizeRange = isDog ? queryData.size.dog : queryData.size.cat;
+    const breedArray = isDog ? queryData.breed.dog : queryData.breed.cat; 
+
+    function getAge(dateString) {
+        let today = new Date();
+        let birthDate = new Date(dateString);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
+    if (houseTrainedFilter && !petData.houseTrained) {
+        return false;
+    } else if (kidFriendlyFilter && !petData.friendlyWith.kids) {
+        return false;
+    } else if (dogFriendlyFilter && !petData.friendlyWith.dogs) {
+        return false;
+    } else if (catFriendlyFilter && !petData.friendlyWith.cats) {
+        return false;
+    } else if (maleFilter != femaleFilter) {
+        console.log("Unequal parameters")
+        if (maleFilter && petData.gender != "Male") {
+            return false;
+        } else if (femaleFilter && petData.gender != "Female") {
+            return false;
+        }
+    }
+
+    const ageYears = getAge(dob);
+
+    let ageClass; 
+
+    if (isDog ? ageYears <= 2 : ageYears <= 1) {
+        ageClass = 0; // Puppy or Kitten
+    } else if (isDog ? ageYears <= 4 : ageYears <= 6) {
+        ageClass = 1; // Young
+    } else if (isDog ? ageYears <= 7 : ageYears <= 9) {
+        ageClass = 2; // Adult
+    } else {
+        ageClass = 3; // Old
+    }
+    
+    if (!ageRange[ageClass].isSelected) {
+        return false;
+    }
+
+    let weightClass;
+
+    if (isDog ? weight <= 25 : weight <= 5) {
+        weightClass = 0;
+    } else if (isDog ? weight <= 60 : weight <= 12) {
+        weightClass = 1;
+    } else {
+        weightClass = 2;
+    }
+
+    if (!sizeRange[weightClass].isSelected) {
+        return false;
+    }
+
+    if (breedArray.length > 0) {
+        const foundBreed = breed.some(r => breedArray.indexOf(r) >= 0)
+        if (!foundBreed) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
 export default function addAPet(
     adoptionLocationName,
     email,
-    name,            
-    breed, 
+    name,
+    breed,
     isDog,
     isMale,
     dob,
@@ -502,15 +583,15 @@ export default function addAPet(
   const validatePetData = (
         adoptionLocationName &&
         email &&
-        name &&            
-        breed && 
+        name &&
+        breed &&
         dob &&
         price &&
         weight &&
         // coat &&
         activityLevel &&
         medicalStatus &&
-        description && 
+        description &&
         picOne &&
         picTwo &&
         picThree &&
@@ -524,8 +605,8 @@ export default function addAPet(
         const petData = {
             adoptionLocationName: adoptionLocationName,
             email: email,
-            name: name,            
-            breed: breed, 
+            name: name,
+            breed: breed,
             isDog: isDog,
             isMale: isMale,
             dob: dob,
@@ -540,22 +621,22 @@ export default function addAPet(
             medicalStatus: medicalStatus,
             description: description,
             pictures: [picOne, picTwo, picThree, picFour, picFive, picSix],
-        };            
-        
+        };
+
         // Upload data to firestore
         petsRef
             .add(petData)
             .then((petID) => {
-                const shelterInfoRef = firebase.firestore().collection('ShelterInfo').doc(email);  
+                const shelterInfoRef = firebase.firestore().collection('ShelterInfo').doc(email);
                 // Add animal to Shelter List
                 isDog ? shelterInfoRef
                     .update( {
-                        Dogs: firebase.firestore.FieldValue.arrayUnion(petID.id)  
+                        Dogs: firebase.firestore.FieldValue.arrayUnion(petID.id)
                     }).then(console.log("Added to dogs"))
                     : shelterInfoRef
                     .update({
                         Cats: firebase.firestore.FieldValue.arrayUnion(petID.id)
-                    }).then(console.log("Added to cats"))                        
+                    }).then(console.log("Added to cats"))
             })
             .catch((error) => {
                 // show an alert in case of error
@@ -566,33 +647,18 @@ export default function addAPet(
 
 export function getPets(setPetData, query) {
     const isDog = query.type.isDog;
-    const houseTrained = query.houseTrained;
-    const friendlyWith = query.friendlyWith;
 
     const usersRef = firebase.firestore().collection('Pets');
     const limit = 100
     usersRef
         .where("isDog", "==", isDog)
-        .where("houseTrained", "==", isDog ? houseTrained.dog : houseTrained.cat)
-        // .where("houseTrained", "!=",
-        //     isDog ?
-        //     houseTrained.dog ? false : null :
-        //     houseTrained.cat ? false : null
-        // )
-        // .where("isKidFriendly", "==",
-        //     isDog ?
-        //         friendlyWith.dog.isKidFriendly ? true : null :
-        //         friendlyWith.cat.isKidFriendly ? true : null
-        // ) 
-        // .where("isCatFriendly", "==", isDog ? friendlyWith.dog.isCatFriendly : friendlyWith.cat.isCatFriendly)       
-        // .where("isDogFriendly", "==", isDog ? friendlyWith.dog.isDogFriendly : friendlyWith.cat.isDogFriendly)
         .limit(limit)
         .get()
         .then((docSnapshot) => {
             let dataList = [];
             let index = 1;
             let length = docSnapshot.size;
-            docSnapshot.forEach((doc) => {    
+            docSnapshot.forEach((doc) => {
                 const data = {
                     petID: doc.id,
                     id: index,
@@ -616,7 +682,11 @@ export function getPets(setPetData, query) {
                     description: doc.data().description,
                     pictures: doc.data().pictures,
                 }
-                dataList.push(data)
+
+                if (shouldPetBeShown(data, query, doc.data().dob, doc.data().weight, doc.data().breed)) {
+                    dataList.push(data)
+                }
+
                 index++
                 if (index === length + 1) {
                     setPetData(dataList);
@@ -660,7 +730,7 @@ export function swipeLeft(
 ) {
   const email = useSelector((state) => state.userAuth.email)
   const petsRef = firebase.firestore().collection('Swipes').doc(email); // need email for id
-    
+
   const validatePetData = (
         email &&
         petID &&
@@ -675,7 +745,7 @@ export function swipeLeft(
             })
             // .then(() => {
             //     // const petsRef = firebase.firestore().collection('Swipes').doc(email);
-                        
+
             // })
             .catch((error) => {
                 // show an alert in case of error
@@ -685,7 +755,7 @@ export function swipeLeft(
 }
 
 export function getLikedPets(email, setPetData) {
-    // Get swipes document for specific account    
+    // Get swipes document for specific account
     const swipesRef = firebase.firestore().collection('Swipes').doc(email);
     const petList = [];
 
@@ -697,11 +767,11 @@ export function getLikedPets(email, setPetData) {
             const likedPetIDs = data.LikedPets;
             let index = 1;
             let numberOfIds = likedPetIDs.length
-            for (const petId of likedPetIDs) { 
+            for (const petId of likedPetIDs) {
                 const petsRef = firebase.firestore().collection('Pets').doc(petId);
                 petsRef
                     .get()
-                    .then((doc) => { 
+                    .then((doc) => {
                         function picCallBack(value) {
                             pictures = value;
                             const petData = {
@@ -737,14 +807,14 @@ export function getLikedPets(email, setPetData) {
                         }
                         getPhotos(petId, picCallBack)
                     })
-            }            
+            }
         });
     }
     getPetData()
 }
 
 export function removeLikedPet(email, petID) {
-    // Get swipes document for specific account    
+    // Get swipes document for specific account
     const swipesRef = firebase.firestore().collection('Swipes').doc(email);
     swipesRef.update({
         LikedPets: firebase.firestore.FieldValue.arrayRemove(petID),
@@ -754,7 +824,7 @@ export function removeLikedPet(email, petID) {
 }
 
 // export function animalShelterDogs(email, setPetData) {
-//     // Get swipes document for specific account    
+//     // Get swipes document for specific account
 //     const shelterInfoRef = firebase.firestore().collection('ShelterInfo').doc(email);
 //     const petList = [];
 
@@ -800,20 +870,19 @@ export function removeLikedPet(email, petID) {
 //                                 setPetData(petList)
 //                             }
 //                             index++;
-//                     })           
+//                     })
 //     }
-    
+
 //     getPetData()
 // }
 
 export function getAnimalShelterPets(email, setCats, setDogs) {
-    // Get swipes document for specific account    
+    // Get swipes document for specific account
     const shelterInfoRef = firebase.firestore().collection('ShelterInfo').doc(email);
 
     const getPetData = () => {
         shelterInfoRef
             .onSnapshot((docSnapshot) => {
-            console.log("821")
             const catList = [];
             const dogList = [];
             const data = docSnapshot.data();
@@ -822,11 +891,11 @@ export function getAnimalShelterPets(email, setCats, setDogs) {
             let catIndex = 1;
             let dogIndex = 1;
 
-            for (const petId of cats) { 
+            for (const petId of cats) {
                 const petsRef = firebase.firestore().collection('Pets').doc(petId);
                 petsRef
                     .get()
-                    .then((doc) => { 
+                    .then((doc) => {
                         const petData = {
                             petID: doc.id,
                             id: catIndex,
@@ -857,13 +926,12 @@ export function getAnimalShelterPets(email, setCats, setDogs) {
                         }
                         catIndex++;
                     })
-            } 
-            console.log(866)
-            for (const petId of dogs) { 
+            }
+            for (const petId of dogs) {
                 const petsRef = firebase.firestore().collection('Pets').doc(petId);
                 petsRef
                     .get()
-                    .then((doc) => { 
+                    .then((doc) => {
                         const petData = {
                             petID: doc.id,
                             id: dogIndex,
@@ -895,12 +963,9 @@ export function getAnimalShelterPets(email, setCats, setDogs) {
                         dogIndex++;
                     })
             }
-            console.log("903")
         });
     }
-    console.log("906")
     getPetData()
-    console.log("908")
 }
 
 async function getPhotos(petID, picCallBack) {

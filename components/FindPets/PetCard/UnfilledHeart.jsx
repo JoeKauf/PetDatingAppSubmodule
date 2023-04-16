@@ -19,7 +19,6 @@ const UnfilledHeart = ({ email, petID, swipe, showSwipeResults, petIndex, isSwip
     const animalShelterMockAlert = () => {
         alert("This heart button has no functionality. It serves to emulate what potential adopters see.")
     }
-    console.log("Is animal shelter?", isAnimalShelter);
     
     const styles = StyleSheet.create({
         imageContainer: {
