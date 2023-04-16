@@ -22,11 +22,13 @@ const SignUp = ({ navigation }) => {
 
     const signUpAccount = () => {
         function setLoggedIn() {
-            dispatch(logInAccount({email: inputs.Email, name: inputs.Name, isShelter: isAnimalShelter}))
+            dispatch(logInAccount({email: inputs.Email.toLowerCase(), name: inputs.Name, isShelter: isAnimalShelter}))
             isAnimalShelter ? navigation.navigate('Shelter Animals') : navigation.navigate('Pet App')
         }
-        
-        isAnimalShelter ? addShelterOrBreeder(inputs.Email, inputs.Password, inputs.Name, inputs.AddressOne, inputs.AddressTwo, inputs.Country, inputs.Zip, setLoggedIn) : addRegularUser(inputs.Email, inputs.Password, inputs.Name, setLoggedIn)    
+
+        if (inputs.Email) {
+            isAnimalShelter ? addShelterOrBreeder(inputs.Email.toLowerCase(), inputs.Password, inputs.Name, inputs.AddressOne, inputs.AddressTwo ? inputs.AddressTwo: null, inputs.Country, inputs.Zip, setLoggedIn) : addRegularUser(inputs.Email.toLowerCase(), inputs.Password, inputs.Name, setLoggedIn)
+        } 
     }
 
     const selectedPage = currentPage === 1 ?

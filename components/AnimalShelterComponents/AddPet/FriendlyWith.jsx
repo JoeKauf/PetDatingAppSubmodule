@@ -22,7 +22,7 @@ const FriendlyWith = ({ navigation }) => {
                 onPress={pressHandler}
                 style={styles.RadioContainer}
             >
-                <Image style={styles.image} source={itemStatus ? require('../../../assets/large-unchecked-icon.png') : require('../../../assets/checked-checkbox-icon.png') } />
+                <Image style={styles.image} source={itemStatus ? require('../../../assets/checked-checkbox-icon.png') : require('../../../assets/large-unchecked-icon.png') } />
                 <Text style={styles.RadioText}>{itemName}</Text>
             </TouchableOpacity>)
     }

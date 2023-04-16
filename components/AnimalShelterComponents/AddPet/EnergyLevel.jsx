@@ -10,7 +10,7 @@ const EnergyLevel = ({ navigation }) => {
     const pageNumber = 0
 
     const dispatch = useDispatch();
-    const energyLevel = useSelector((state) => state.addPet.energyLevel);
+    const activityLevel = useSelector((state) => state.addPet.activityLevel);
 
 
     const RadioButton = ({itemName}) => {
@@ -19,7 +19,7 @@ const EnergyLevel = ({ navigation }) => {
                 onPress={() => dispatch(setEnergyLevel(itemName))}
                 style={styles.RadioContainer}
             >
-                <Image style={styles.image} source={energyLevel != itemName ? require('../../../assets/unchecked-radio-icon.png') : require('../../../assets/checked-radio-icon.png') } />
+                <Image style={styles.image} source={activityLevel != itemName ? require('../../../assets/unchecked-radio-icon.png') : require('../../../assets/checked-radio-icon.png') } />
                 <Text style={styles.RadioText}>{itemName}</Text>
             </TouchableOpacity>)
     }

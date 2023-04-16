@@ -37,6 +37,7 @@ const PetDescription = ({ navigation, sideText }) => {
                     multiline={true}
                     value={petDescription}
                     onChangeText={(text) => dispatch(setDescription(text))}
+                    maxLength={69}
                 />
                 <Text style={styles.charLimit}>Characters left: {charRemaining}</Text>
                 <Text style={styles.subtitleText}>Include things such as personality and unique traits...</Text>

@@ -38,6 +38,7 @@ const PetMedical = ({ navigation, sideText }) => {
                     multiline={true}
                     value={medicalStatus}
                     onChangeText={(text) => dispatch(setMedicalStatus(text))}
+                    maxLength={69} 
                 />
                 <Text style={styles.charLimit}>Characters left: {charRemaining}</Text>
                 <Text style={styles.subtitleText}>Include things like: vaccination status, health issues, spay/neuter, etc...</Text>

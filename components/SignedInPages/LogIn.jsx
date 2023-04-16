@@ -16,11 +16,11 @@ const LogIn = ({ navigation }) => {
 
     const logIn = () => {
         function setLoggedIn(email, name, isShelter, chats) {
-            dispatch(logInAccount({email: email, name: name, isShelter: isShelter, chats: chats}))
+            dispatch(logInAccount({email: email.toLowerCase(), name: name, isShelter: isShelter, chats: chats}))
             isShelter ? navigation.navigate('Shelter Animals')  : navigation.navigate('Pet App')
         }
         
-        logUserIn(inputs.Email, inputs.Password, setLoggedIn)     
+        inputs.Email && logUserIn(inputs.Email.toLowerCase(), inputs.Password, setLoggedIn)     
     }
 
     return (

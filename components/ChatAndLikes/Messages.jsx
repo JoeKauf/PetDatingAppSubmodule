@@ -5,9 +5,9 @@ import { getChats } from '../../data_layer/Chats';
 import { setChatData } from '../../redux/chatData';
 import { useDispatch } from "react-redux";
 
-const Messages = ({ petData, navigation, email }) => {
+const Messages = ({ petData, navigation, email, isShelter }) => {
     const [chatMessages, setChatMessages] = useState([])
-
+    const noMessageText = isShelter ? "(wait for someone to reach out)" : "(click on a pet to start a chat)"
     const dispatch = useDispatch();
     
     function openUpChat(data) {
@@ -67,7 +67,7 @@ const Messages = ({ petData, navigation, email }) => {
                 <ScrollView style={{height: 565}}>{petMessages}</ScrollView> :
                 <View style={styles.noMessagesContainer}>
                     <Text style={styles.noMessagesText}>No Messages</Text>
-                    <Text style={styles.noMessagesText}>(click on a pet to start a chat)</Text>
+                    <Text style={styles.noMessagesText}>{noMessageText}</Text>
                 </View>}
         </View>
     )

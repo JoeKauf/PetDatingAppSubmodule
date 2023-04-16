@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity, Image } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { useDispatch } from "react-redux";
-// import { updateDogBreedSelection, updateCatBreedSelection } from '../../redux/querySettings'
+import { updateDogBreedSelection, updateCatBreedSelection } from '../../../redux/querySettings'
 import { useSelector } from "react-redux";
 
 DropDownPicker.setMode("BADGE");
@@ -10,18 +10,20 @@ DropDownPicker.setMode("BADGE");
 const BreedDropdown = () => {
     const dispatch = useDispatch();
     const breeds = useSelector((state) => state.breeds);
-    const isDog = useSelector((state) => state.query.type.isDog);
     const queryBreeds = useSelector((state) => state.query.breed);
+    const isDog = useSelector((state) => state.addPet.isDog);
+
 
     const [value, setValue] = useState(isDog ? queryBreeds.dog : queryBreeds.cat);
     const breedValue = isDog ? queryBreeds.dog : queryBreeds.cat;
     if (value != breedValue) {
-        dispatch(isDog ? updateDogBreedSelection(value) : updateCatBreedSelection(value) )
+        dispatch(isDog ? updateDogBreedSelection(value) : updateCatBreedSelection(value))
     }
     
     return (
     <View style={styles.dropDownPicker}>
       <DropDownPicker
+        max={3}
         multiple={true}
         searchable={true}    
         open={true}

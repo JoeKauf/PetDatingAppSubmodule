@@ -23,7 +23,9 @@ const ShelterAnimals = ({ navigation }) => {
     }
 
     useEffect(() => {
+        console.log("Get Animals pre")
         getAnimalShelterPets(email, setCats, setDogs);
+        console.log("Get Animals post")
     }, [])
 
     return (
@@ -45,6 +47,7 @@ const ShelterAnimals = ({ navigation }) => {
                         navigation={navigation}
                         style={styles.petCard}
                         setSelectedAnimal={setSelectedAnimal}
+                        isAnimalShelter={true}
                 />
                 </View>}
             </View>

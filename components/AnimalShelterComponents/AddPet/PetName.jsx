@@ -24,7 +24,7 @@ const PetName = ({ navigation }) => {
                 pageNumber={pageNumber}
             />
             <View style={styles.centerInformation}>
-                <InputBar value={name} setValue={(text) => dispatch(setName(text))}/>
+                <InputBar value={name} isAlpha={true} setValue={(text) => dispatch(setName(text))}/>
                 <Text style={[styles.subtitleText]}>This is the name potential adopters will see</Text>
             </View>
 

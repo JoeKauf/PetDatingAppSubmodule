@@ -79,7 +79,6 @@ export function sendAMessage(message, chatId, senderId, userName, petId, shelter
     if (chatExists) {
         sendMessageToExistingChat(chatId, messagesRef, chatsRef, message, senderId, timestamp, userName)
     } else {
-        console.log("Create new chat")
         createNewChat(messagesRef, chatsRef, message, senderId, timestamp, userName, petId, shelterId, initializeChatId)
     }
 }
@@ -140,7 +139,6 @@ export function getChats(userId, callback) {
 
     usersRef.onSnapshot((doc) => {
         const chats = doc.data().chats;
-        
         if (chats) {
             getIndividualChatInfo(chats, callback);
         }

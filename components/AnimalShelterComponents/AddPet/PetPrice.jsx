@@ -25,11 +25,11 @@ const PetPrice = ({ navigation, sideText }) => {
             />
             <View style={styles.centerInformation}>
                 <InputBar
-                    barWidth={45}
+                    barWidth={130}
                     sideText={'$'}
                     side={'left'}
-                    placeholder={'---'}
-                    maxLength={3}
+                    placeholder={'---,---'}
+                    maxLength={6}
                     value={price}
                     setValue={(text) => dispatch(setPrice(text))}
                 />

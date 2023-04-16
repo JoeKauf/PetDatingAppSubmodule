@@ -14,11 +14,11 @@ const PetCard = ({
     goBack,
     navigation,
     isSwipeDisabled,
-    setSelectedAnimal
+    setSelectedAnimal,
+    isAnimalShelter,
     }) => {
     // Selected Picture is between 0 and 5 depending on size
     const [selectedPicture, setSelectedPicture] = useState(0);
-
 
     return (
         <View style={[!isSwipeDisabled ? styles.cardContainer : styles.disabledCardContainer, styles.shadowProp]}>
@@ -40,6 +40,7 @@ const PetCard = ({
                     setSelectedPicture={setSelectedPicture}
                     navigation={navigation}
                     setSelectedAnimal={setSelectedAnimal}
+                    isAnimalShelter={isAnimalShelter}
                 />
             </ImageBackground>
         </View>

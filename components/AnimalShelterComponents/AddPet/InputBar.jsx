@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, TextInput, Text } from 'react-native';
 
-const InputBar = ({ date, barWidth, sideText, side, placeholder, maxLength, value, setValue }) => {
+const InputBar = ({ date, barWidth, sideText, side, placeholder, maxLength, value, setValue, isAlpha }) => {
     const styles = StyleSheet.create({
     dateUnderlines: {
         backgroundColor: '#6A6A6A',
@@ -84,7 +84,7 @@ const InputBar = ({ date, barWidth, sideText, side, placeholder, maxLength, valu
                 <View style={styles.inputBar} />
             </View> :
                 <View style={{ flexDirection: 'row' }}>
-                    {side === 'left' && <Text style={[styles.inputText, {marginRight: -20}]}>{sideText}</Text>}
+                    {side === 'left' && <Text style={[styles.inputText, {marginRight: -70}]}>{sideText}</Text>}
                     <View>
                     <TextInput
                         style={styles.inputText}
@@ -93,6 +93,7 @@ const InputBar = ({ date, barWidth, sideText, side, placeholder, maxLength, valu
                         onChangeText={(text) => setValue(text)}
                         placeholder={placeholder || 'Name...'}
                         maxLength={maxLength}
+                        keyboardType={isAlpha ? null : 'numeric'}
                     />
                     <View style={styles.inputBar} />
                     </View>

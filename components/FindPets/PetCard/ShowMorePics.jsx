@@ -14,6 +14,7 @@ const ShowMorePics = (
         swipe,
         navigation,
         setSelectedAnimal,
+        isAnimalShelter,
     }) => {
     
     const [showMoreInfo, setShowMoreInfo] = useState(false);
@@ -201,6 +202,7 @@ const ShowMorePics = (
                             navigation={navigation}
                             isSwipeDisabled={isSwipeDisabled}
                             petData={petData}
+                            isAnimalShelter={isAnimalShelter}
                         />
                         <View style={{width: 17}}></View>
                         <UnfilledHeart
@@ -212,6 +214,7 @@ const ShowMorePics = (
                             swipe={swipe}
                             id={petData.id}
                             setSelectedAnimal={setSelectedAnimal}
+                            isAnimalShelter={isAnimalShelter}
                             />
                         </View>
                     {!showMoreInfo && <Text style={styles.infoSubheadingTop}>{petData.adoptionLocationName}{"\n"}{petData.distanceAway}</Text>}

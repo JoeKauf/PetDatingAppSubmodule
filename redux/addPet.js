@@ -3,16 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const addPetSlice = createSlice({
   name: "userAuth",
   initialState: {
-      isDog: false,
+      isDog: true,
       name: 'Default name',
       dob: '01-22-2001',
       isMale: true,
       breeds: [],
       weight: '10',
       price: '10',
-      isDogFriendly: false,
-      isCatFriendly: false,
-      isKidFriendly: false,
+      isDogFriendly: true,
+      isCatFriendly: true,
+      isKidFriendly: true,
       isHouseTrained: false,
       activityLevel: 'Medium',
       medicalStatus: 'Med',
@@ -58,15 +58,21 @@ export const addPetSlice = createSlice({
         }
       },
     setWeight: (state, action) => {
+      let weightString = action.payload;
+      weightString = weightString.replace(/\D/g, '');
+            
         return {
             ...state,
-            weight: action.payload,
+            weight: weightString,
         }
       },
     setPrice: (state, action) => {
+      let priceString = action.payload;
+      priceString = priceString.replace('.', '').toString();;
+
         return {
             ...state,
-            price: action.payload,
+            price: priceString,
         }
       },
     setDogFriendly: (state, action) => {
@@ -96,7 +102,7 @@ export const addPetSlice = createSlice({
     setEnergyLevel: (state, action) => {
         return {
             ...state,
-            energyLevel: action.payload,
+            activityLevel: action.payload,
         }
       },
     setMedicalStatus: (state, action) => {

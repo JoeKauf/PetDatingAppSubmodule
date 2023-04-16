@@ -16,6 +16,7 @@ const BasicPetInfo = ({
     setSelectedPicture,
     setSelectedAnimal,
     navigation,
+    isAnimalShelter,
 }) => {
     const styles = StyleSheet.create({
     infoWrapper: {
@@ -88,6 +89,7 @@ const BasicPetInfo = ({
                         swipe={swipe}
                         navigation={navigation}
                         setSelectedAnimal={setSelectedAnimal}
+                        isAnimalShelter={isAnimalShelter}
                     />
             </View>
         </View>

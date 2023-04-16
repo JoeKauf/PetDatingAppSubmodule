@@ -5,7 +5,7 @@ import { removePet } from '../../../redux/mypets';
 import { swipeRight, swipeLeft } from '../../../data_layer/Pets';
 import { removeLikedPet } from '../../../data_layer/Pets';
 
-const UnfilledHeart = ({ email, petID, swipe, showSwipeResults, petIndex, isSwipeDisabled, id, setSelectedAnimal }) => {
+const UnfilledHeart = ({ email, petID, swipe, showSwipeResults, petIndex, isSwipeDisabled, id, setSelectedAnimal, isAnimalShelter }) => {
     const [showHeart, setShowHeart] = useState(true);
     const dispatch = useDispatch();
     
@@ -16,6 +16,11 @@ const UnfilledHeart = ({ email, petID, swipe, showSwipeResults, petIndex, isSwip
         dispatch(removePet(id));
     }
 
+    const animalShelterMockAlert = () => {
+        alert("This heart button has no functionality. It serves to emulate what potential adopters see.")
+    }
+    console.log("Is animal shelter?", isAnimalShelter);
+    
     const styles = StyleSheet.create({
         imageContainer: {
             height: isSwipeDisabled ? 35 : 40,
@@ -37,7 +42,8 @@ const UnfilledHeart = ({ email, petID, swipe, showSwipeResults, petIndex, isSwip
         <TouchableOpacity
             activeOpacity={0.6}
             underlayColor="#DDDDDD"
-            onPress={isSwipeDisabled ? removePetByID : () => swipe('right')}
+            onPress={isAnimalShelter ? animalShelterMockAlert :
+                isSwipeDisabled ? removePetByID : () => swipe('right')}
         >
             <Image style={styles.imageContainer} source={heartPath} />
         </TouchableOpacity>

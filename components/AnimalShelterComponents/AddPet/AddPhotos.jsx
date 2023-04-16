@@ -9,33 +9,44 @@ import { useSelector } from "react-redux";
 const AddPhotos = ({ navigation }) => {   
     const sheterInfo = useSelector((state) => state.userAuth)
     const petData = useSelector((state) => state.addPet);
-    console.log("IsDog: ", petData.isDog);
+    const queryBreeds = useSelector((state) => state.query.breed);
+
     const addPet = () => {
-        addAPet(
-            sheterInfo.name,
-            sheterInfo.email,  // Shelter Email
-            petData.name,            
-            1,  // Breed
-            petData.isDog,
-            petData.isMale,
-            petData.dob,
-            petData.isKidFriendly,
-            petData.isDogFriendly,
-            petData.isCatFriendly,
-            petData.price, // Price
-            petData.weight,
-            petData.activityLevel,
-            petData.isHouseTrained,
-            petData.medicalStatus,
-            petData.petDescription,
-            petData.photos.one,
-            petData.photos.two,
-            petData.photos.three,
-            petData.photos.four,
-            petData.photos.five,
-            petData.photos.six
-        )
-        navigation.navigate('Shelter Animals')
+        if (petData.photos.one &&
+            petData.photos.two &&
+            petData.photos.three &&
+            petData.photos.four &&
+            petData.photos.five &&
+            petData.photos.six) {
+            
+            addAPet(
+                sheterInfo.name,
+                sheterInfo.email,  // Shelter Email
+                petData.name,
+                petData.isDog ? queryBreeds.dog : queryBreeds.cat,  // Breed
+                petData.isDog,
+                petData.isMale,
+                petData.dob,
+                petData.isKidFriendly,
+                petData.isDogFriendly,
+                petData.isCatFriendly,
+                petData.price, // Price
+                petData.weight,
+                petData.activityLevel,
+                petData.isHouseTrained,
+                petData.medicalStatus,
+                petData.petDescription,
+                petData.photos.one,
+                petData.photos.two,
+                petData.photos.three,
+                petData.photos.four,
+                petData.photos.five,
+                petData.photos.six
+            )
+            navigation.navigate('Shelter Animals')
+        } else {
+            alert("Please select six photos.")
+        }
     }
 
     const pageNumber = 0
