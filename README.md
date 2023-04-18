@@ -148,27 +148,63 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 <table>
   <tr>
     <th>ID Number</th>
-    <td>(place # here)</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Function</td>
   </tr>
   <tr>
     <th>Description</th>
-    <td>(place description here)</td>
+    <td>Users will be shown pets once logged in. This will entail information such as name, age, description, and medical status.</td>
   </tr>
   <tr>
     <th>Rationale</th>
-    <td>(place rationale here)</td>
+    <td>This information is vital for potential adopters to know.</td>
   </tr>
   <tr>
     <th>Fit Criterion</th>
-    <td>(place Fit Criterion here)</td>
+    <td>When a pet is shown, the above information will be available to users</td>
   </tr>
   <tr>
     <th>Priority</th>
-    <td>(place Priority here)</td>
+    <td>High</td>
   </tr>
   <tr>
     <th>Dependencies</th>
-    <td>(place Priority here)</td>
+    <td>None</td>
+  </tr>
+</table>
+</br>
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>2</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Function</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>User will be able to swipe left or right on pets.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Key functionality of most dating apps.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Pet cards can be swiped left or right when finger is dragged upon it.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>1</td>
   </tr>
 </table>
 ## V. Project Implementaiton, Description, and Explanation
