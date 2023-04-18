@@ -785,6 +785,76 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 </br >
 
 ## V. Project Implementaiton, Description, and Explanation
+### Sign Up Page
+#### Implementation
+(Sign Up Page Screenshot Here)
+#### Description
+Sign Up page allows adopters and animals shelters to create accounts.
+#### Explanation
+The page is relatively straight forward. Both screens are relatively the same except that animal shelters are required to enter in their address. Aside from that, users are required to enter in their name, email, and password. This ensures that pets are saved to the database with the correct information.
+
+### Log In Page
+#### Implementation
+(Log In Page Screenshot)
+#### Description
+Users can log in by entering their email and password. If the account exists then they will be pressented with the Animal Shelter Pets screen or the Find Pets screen depending on their permissions.
+#### Explanation
+This page is key in storing user information and assigning them to their proper pages. It makes the logging in process seamless and provides the users the same experience with loggin ing.
+
+### Find Pets Page
+#### Implementation
+(Screenshot)
+#### Description
+Potential adopters will be presented with pets they can choose from here.
+#### Explanation
+Animals will be shown based upon filters set in the filter page. From there the shelter can swipe left of right on a pet. Swiping left signifies that they are hiding the pet. Swiping right signifies that they are saving the pet. In addition to swipe functionality there are various buttons the user can press. If the user presses the << symbol, the previous swipe is undone. If the user taps on the chat icon, the user opens a chat with the animal shelter. If the user taps on the heart button, the pet is liked and it autoswipes for the user. 
+
+At the top right of the pet card there are picture progress dots. They show which picture in the selection the user is on. They can tap on the right side of the photo to show the next photo. If they tap on the left side it shows the previous pet. If the user decides to tap on the animal's name, it will display more information about the pet.
+
+### Filter Pets Page
+#### Implementation
+(Screenshot)
+#### Description
+Users can filter what pets they see based upon certain criteria.
+#### Explanation
+Users will be able to filter pets by:
+* Age
+* Breed
+* Weight
+* Price
+* Size
+* Distance
+* Coat
+* Friendly with dogs, cats, kids
+* Housetrained Status
+By tapping on various buttons the user can select what criteria they would like to set for a pet they are searching for.
+
+### Liked Pets Page
+#### Implementation
+(Screenshhot)
+#### Description
+After a pet is added
+#### Explanation
+
+### Messaging Page
+#### Implementation
+#### Description
+#### Explanation
+
+### Animal Shelter Pets Page
+#### Implementation
+#### Description
+#### Explanation
+
+### Add Pet Screens
+#### Implementation
+#### Description
+#### Explanation
+
+### Pet Preview (Liked Pets and Animal Shelter Pets)
+#### Implementation
+#### Description
+#### Explanation
 
 ## VI. Test Plan
 
