@@ -55,29 +55,65 @@ On the app, [only women are allowed to start chats](https://bumble.com/en/help/h
 ### **Dating App Algorithms**
 #### Elo Rating
 The first algorithm that dating apps employ is called the Elo Rating.
-Elo Ratings were originally created to show the rankings of chess players.
+[Elo Ratings](https://www.chess.com/terms/elo-rating-chess) were originally created to show the rankings of chess players.
 The higher the elo rating the higher the chance of them beating their opponent.
-On dating apps, these scores are used to determine the chances of being swiped right on.
+On dating apps, these scores are used to determine the [chances of being swiped right on](https://www.theverge.com/2019/3/15/18267772/tinder-elo-score-desirability-algorithm-how-works).
 In other terms, it is an attractiveness rating. The goal of the app is to get the user
-hooked as soon as possible. They show the user the most attractive users on the platform
-and inflate the number of attractive users by showing them as frequently as possible.
-Attractiveness ratings have received a lot of questions regarding ethicality lately.
+hooked as soon as possible. They show the user the most attractive users on the platform,
+inflating the percieved number of attractive users.
+Attractiveness ratings have received a lot of questions regarding its ethics.
 
 #### Similarity Algorithm 
 Once the app has a little more data on a particular user, the app is able to implement a 
 Similarity Algorithm. These algorithms tailor better to the individual preferences of users.
 They serve as predictive algorithms that look at your swipe history and who similar users have
-liked in the past. Analyze the following situation:
+liked in the past. Let's use John and Greg to help explain.
 * John likes Sarah, Jane, and Leah.
 * Greg likes Sarah and Jane. 
-Who is should Greg be shown next? Greg should be shown Leah. Similarity algorithms are more complex than this and integrate a lot more data.
+Who is should Greg be shown next? Greg should be shown Leah. 
+Although similarity algorithms are more complex, this helps give a foundation for how they operate.
 
 ### **Petfinder**
+[Petfinder](https://www.petfinder.com/) is a pet adoption website that has been around since 1996.
+It is the most poopular pet adoption app and has 14,000 animal shelters throughout North America. They are owned by Purina and make revenue via ads placed on their website. The main premise is to allow users to look up animals on the site. They can search by breed, age, energy, coat, location, and a variety of other factors. 
 
-### **Common Mobile JavaScript Languages**
+### **Common Mobile Languages**
+The ideal language for this application would be:
+* 1. Multiplatform
+* 2. Low Learning Curve
+* 3. Performant
+* 4. Size
+#### Angular Mobile UI
+A [Google language](https://angular.io/) that is adaptable and multiplatform. However, it is a bit clunkier on the size
+and its learning curve is fairly high so this is not a good option for the project.
+#### Swift
+[Swift](https://swift.org/) is an easy to learn programming language created by Apple. 
+It is compatible with IOS devices, but lacks the ability to be cross platform. There are better options out there
+than Swift.
+#### Vue
+[Vue](https://vuejs.org/) is a Javascript framework that is [lightweight, quick](https://jelvix.com/blog/js-frameworks-is-vuejs-better-than-react#:~:text=Vue%20is%20faster%20and%20smaller,therefore%2C%20finding%20hires%20is%20faster.) and cross platform. 
+However, it lacks a large amount of documentation and libraries for more complex apps. 
+#### React Native
+React Native seems like the perfect compromise between speed, performance, learning curve, and size. It is relatively lightweight, fairly perfomant, cross platform, and I have backround in React which will make this slightly easier to use than the other frameworks.
+### **Common Mobile Databases**[label](https://sqlite.org/index.html)
+#### SQLite
+[A simplified version of SQL](https://sqlite.org/index.html) catering to Mobile apps. It has the basic features of SQL, but information is stored locally on a mobile app. The datatypes are simplified to [NULL, INTEGER, REAL, TEXT, and BLOB](https://www.sqlite.org/datatype3.html). With Expo this is not compatible because Expo is a cross-platform compiler that is loaded through the cloud. Each time the app reloads the database for the app itself will reload.
+#### Firebase
+[Google database](https://firebase.google.com/) that offers a free server and database through the cloud. It is a NoSQL solution and simplifies the process of conncecting servers and a backend. Some functionality is highly limited, especially in regards to quering. Another big issue is in regards to the free services running out when the app hits a certain usage level. Another major issue with firebase is that it cannot be converted over to SQL easily. However, due to it's ease of use and free/quick set up this is the best free compromise.
 
-### **Common Mobile Databases**
+### Cross-Platform Development
+For applications it has become more common place to create a single application that can be used on multilpe 
+operating systems. This can [save costs](https://www.vizteck.com/post/cross-platform-app-development-costs-how-much-you-save) overall by preventing maintenance of identical systems with different 
+languages. There are some drawbacks to this. Although some languages are relatively universal, [native
+functionalities are not](https://www.appschopper.com/blog/pros-cons-cross-platform-mobile-app-development/). These need to be accounted for in addition to your code itself. This can involve
+[permissions](https://docs.expo.dev/guides/permissions/) or different calls to native functionalities with different commands depending on operating system.
+This can leave issues only discovered during testing. 
 
+[IOS](https://www.apple.com/ios/ios-16/) is Apple's mobile operating system and [Android](https://www.android.com/) is Google's mobile operating system. Each of these
+systems have their own app stores. IOS is a little harder to get an app. The app is required to 
+be cross-compaptible with all of Apple's mobile devices including their Ipads. Apple also has a 
+[strict review process](https://developer.apple.com/ios/submit/) that makes it much harder to get into the app store. 
+Google is [much easier to upload apps to and it requires a one-time paid account](https://support.google.com/googleplay/android-developer/answer/9859152?hl=en).
 
 ## III. Project Languages, Software, and Hardware
 ### Project Languages
