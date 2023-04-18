@@ -207,6 +207,583 @@ Google is [much easier to upload apps to and it requires a one-time paid account
     <td>1</td>
   </tr>
 </table>
+</br>
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>3</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Pet is saved to liked pets when swiped right upon.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Users need to be able to see saved pets and access them for future reference.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Liked pets appear in the liked pets page.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>2</td>
+  </tr>
+</table>
+</br>
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>When pet is swiped left upon it is no longer shown.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Pet has already been seen and should be moved.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Pet is no longer in view and the user does not see it.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>2</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>5</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>When on a liked pets page, users will be able to tap on pet and see information regarding pet name, description, and age.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Seeing extra information is key to help the user decide further upon concrete information.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>When user taps on bottom banner, more information regarding the pet will appear.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>1 & 2</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>6</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Usability</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal Shelters and Regular users will be able to communicate over messaging.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>In order to arrange adoptions, it is vital to first establish contact with the shelter.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>When a message is sent via messaging, it appears in the recipients inbox.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>7</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal Shelters will be able to upload animals with the following information: name, age, activity level, description, and price.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Relevant information for interested parties.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Animals have information easily accessible when viewed.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>8</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal shelters will be able to add animals to the cat or dog section.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>You can’t see pets if you can’t upload them.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Shelters are able to upload pets.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>7</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>9</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal shelters will be able to preview their pets and see information as regular users would see.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Helps animal shelters know see what potential adopters will see.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>View is relatively the same as what adopters can see.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>7 & 8</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>10</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Users will be able to tap through photos and see each photo of the pet.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Helps get a more well rounded idea of what the pet looks like.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>User taps on the right to see the next image. Users taps on the left to see the previous image.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>7 & 8, 2 & 3</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>11</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Users will be able to filter pets based on size, age, breed, housetrained, cat friendliness, dog friendliness, or kid friendliness.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Helps users get to pets they are more likely to adopt.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>When filter is active, pets reflect the choices.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>12</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Look and Feel</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>The primary theme of the app will consist of green resting upon a light background.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Consistency helps an app look professional.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>No major changes in theme across pages.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>13</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal shelters will be able to upload photos from their device onto the app.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Helps shelters upload animals quicker after taking photos.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Photos on App reflect those uploaded.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>14</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Usability</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>The user will never be more than 3 clicks away from any main screen.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Makes the app easier for users to click through.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Self explanatory</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>15</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Performance</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Pet cards will load in under 5 seconds when the user first logs into the app.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>No one wants to use an app that takes a long time to load.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Self explanatory</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>16</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Usability</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Users under 30 can figure out how to navigate the app in under 5 minutes</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>With apps, you only have a short amount of time to win over users for them to continue use.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>After 5 minutes, the user can get to the home screen in under 20 seconds.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>17</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Usability</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Creating an account takes under 5 minutes.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>The more steps it takes to create an account, the more unlikely the user will do it.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>User can quickly and efficiently create an account in less than 5 minutes.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>18</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Usability</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Users can use biometrics to login.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>It’s a faster and more efficient way to sign into an account.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Face-Id pops up on the Iphone whenever a user signs in. This will give them their password and username.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>19</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Users can save at least 10 liked pets.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Important for later viewing and sharing, as well as contacting animal shelters.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>Swipe right on 10 pets, 10 pets appear in their liked pets./</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>2 & 3</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>20</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>Functional</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Animal shelters can create at least 20 pets.</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>Animal shelters have numerous pets, they need to be able to upload them.</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>20 pets are stored on the app.</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
 ## V. Project Implementaiton, Description, and Explanation
 
 ## VI. Test Plan
