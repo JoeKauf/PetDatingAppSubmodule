@@ -5,6 +5,12 @@
 **Prof. Henderson**<br />
 **May 2023**<br />
 
+## Terms of Use
+Joseph Kaufman is the creator of this application and any use, 
+copying of source code, or modificaiton of the document without 
+consent is prohibited. Professor's may use the demo, UI screenshots, or run the app.
+They are prohibited from sharing the source code.
+
 ## I. Statement of Purpose
 In the ideal world, potential adopters could adopt a cat or a dog without the concept 
 of an animal they don’t choose being euthanized. However, this is not the case. Around 
@@ -121,26 +127,50 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 * [JavaScript](https://developer.oracle.com/languages/javascript.html)
 ### Project Libraries
 * **Node Package Manager**
-  * [react-tinder-card](https://www.npmjs.com/package/react-tinder-card)
-  * [expo-location](https://docs.expo.dev/versions/latest/sdk/location/)
-  * [react-native-dropdown-picker](https://www.npmjs.com/package/react-native-dropdown-picker)
-  * [expo-image-picker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
-  * [expo-linear-gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
-  * [@react-native-community/hooks](https://www.npmjs.com/package/@react-native-community/hooks)
-  * [@miblanchard/react-native-slider](https://github.com/miblanchard/react-native-slider)
-  * [@reduxjs/toolkit](https://redux-toolkit.js.org/)
-  * [react-redux](https://react-redux.js.org/)
+  * [react-tinder-card](https://www.npmjs.com/package/react-tinder-card): used for card swipe animation.
+  * [expo-location](https://docs.expo.dev/versions/latest/sdk/location/): gets the location of the user.
+  * [react-native-dropdown-picker](https://www.npmjs.com/package/react-native-dropdown-picker): used for breed dropdowns.
+  * [expo-image-picker](https://docs.expo.dev/versions/latest/sdk/imagepicker/): uses native functionalities to access camera roll.
+  * [expo-linear-gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/): used for gradient at bottom of pet cards.
+  * [@react-native-community/hooks](https://www.npmjs.com/package/@react-native-community/hooks): used to get access native keyboard.
+  * [@miblanchard/react-native-slider](https://github.com/miblanchard/react-native-slider): used in max distance slider.
+  * [@reduxjs/toolkit](https://redux-toolkit.js.org/): accessory tool to simplify react redux.
+  * [react-redux](https://react-redux.js.org/): global state management tool for JavaScript applications.
 * **Google Firebase**
-  * [Firestore Database](https://firebase.google.com/docs/firestore)
+  * [Firestore Database](https://firebase.google.com/docs/firestore): free database hosted hosted through the cloud.
 ### Additional Software Needed
-* [Expo Go](https://expo.dev/client)
-* [Expo](https://expo.dev/)
+* [Expo Go](https://expo.dev/client): mobile IOS app that connects to Expo to loads compiled code through cloud.
+* [Expo](https://expo.dev/): additional software that enables native development and compilation without native code.
 ### Hardware
 * Iphone 11 (Mac OS)
 * Windows PC
- 
 ## IV. Project Requirements
-
+<table>
+  <tr>
+    <th>ID Number</th>
+    <td>(place # here)</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>(place description here)</td>
+  </tr>
+  <tr>
+    <th>Rationale</th>
+    <td>(place rationale here)</td>
+  </tr>
+  <tr>
+    <th>Fit Criterion</th>
+    <td>(place Fit Criterion here)</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <td>(place Priority here)</td>
+  </tr>
+  <tr>
+    <th>Dependencies</th>
+    <td>(place Priority here)</td>
+  </tr>
+</table>
 ## V. Project Implementaiton, Description, and Explanation
 
 ## VI. Test Plan
@@ -150,11 +180,3 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 ## VIII. Challenges Overcome
 
 ## IV. Future Enhancements
-
-## 
-
-## Terms of Use
-Joseph Kaufman is the creator of this application and any use, 
-copying of source code, or modificaiton of the document without 
-consent is prohibited. Professor's may use the demo, UI screenshots, or run the app.
-They are prohibited from sharing the source code.
