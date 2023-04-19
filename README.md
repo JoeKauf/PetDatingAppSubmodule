@@ -885,6 +885,50 @@ animal shelter's buttons will not work for chatting
 or liking a pet.
 
 ## VI. Test Plan
+### Survey/Peer Testing
+The following prompts were used to survey fellow classmates at school. They were given five minutes to play around with the app
+and answer the following questions:
+---------------------------------------------------------------------------------------------------------------------------------
+**Name ________:** </br>
+**Date __________:**</br></br>
+
+Use the app and answer the following questions:
+<ol>
+  <li>How easy was this application for you to use and figure out?</li></br>
+  1&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;10</br></br>
+  <li>Overall, how would you rate the appearance of the application?</li></br>
+  1&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;10</br></br>
+  <li>If this was an app in the app store, how likely would you be to use it?</li></br>
+  1&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;10</br></br>
+  <li>Is there anything that if changed would make it easier to use?</li></br></br></br>
+  <li>What was your favorite thing about the app?</li></br></br></br>
+  <li>If you could change one thing, what would that be?</li></br></br></br>
+  <li>Is there anything that would keep you from using this app?</li></br></br>
+</ol>
+
+The following are the results of the surveys:
+---------------------------------------------------------------------------------------------------------------------------------
+Use the app and answer the following questions:
+<ol>
+  <li>How easy was this application for you to use and figure out?</li></br>
+    <b>8.8</b> (average)</br></br>
+  <li>Overall, how would you rate the appearance of the application?</li></br>
+    <b>8.6</b> (average)</br></br>
+  <li>If this was an app in the app store, how likely would you be to use it?</li></br>
+    <b>7</b> (average)</br></br>
+  <li>Is there anything that if changed would make it easier to use?</li></br>
+    <b>Delayed swiping/features, move undo-swipe position, onboarding tutorial for new users, and darker back buttons.</b></br></br>
+  <li>What was your favorite thing about the app?</li></br>
+    <b>Simple layout and ease of use</b></br></br>
+  <li>If you could change one thing, what would that be?</li></br>
+    <b>Animal shelters can edit pet</b></br></br>
+  <li>Is there anything that would keep you from using this app?</li></br><b>Not wanting a pet</b></br></br></br>
+</ol>
+
+### Unit Testing
+The following unit tests were created to ensure that the app was functioning. Used to bring awareness of blindspots to my own perceptions
+and helped to verify that everything is working as it should be.
+---------------
 <table>
   <tr>
     <th>Page</th>
@@ -1499,44 +1543,773 @@ or liking a pet.
       <ol>
         <li>Tap on the pet’s name at the bottom of the pet card</li>
       </ol>
-      Male or Female (required)
-      <li>Shown and visible with appropriate gender symbol</li>
-      Pet’s breed (required)
-      <li>Shows one or more breeds or the text (mixed)</li>
-      Price (required)
-      <li>A price is shown greater than or equal to $0</li>
-      Weight (required)
-      <li>Any weight above 0 lbs</li>
-      Friendly With (required)
-      <li>Shows Baby, Dog, and Cat icons with either a check or an x next to it</li>
-      House Trained (required)
-      <li>Says “House Trained” or “Not House Trained”</li>
-      Energy (required)
-      <li>Shows either:
-        <li>“Sedentary Energy”</li>
-        <li>“Low Energy”</li>
-        <li>“Medium Energy”</li>
-        <li>“High Energy”</li>
-        <li>“Very High Emergy”</li>
-      </li>
-      Pet Description (optional)
-      <li>May or may not contain text</li>
-      
-      Medical status 
-      May or may not contain text
     </td>
   </tr>
   <tr>
     <th>Expected Results</th>
-    <td</td>
+    <td>
+      a. Male or Female (required)
+    <li>Shown and visible with appropriate gender symbol</li>
+    b. Pet’s breed (required)
+    <li>Shows one or more breeds or the text (mixed)</li>
+    c. Price (required)
+    <li>A price is shown greater than or equal to $0
+    d. Weight (required)
+    <li>Any weight above 0 lbs
+    e. Friendly With (required)
+    <li>Shows Baby, Dog, and Cat icons with either a check or an x next to it
+    f. House Trained (required)
+    <li>Says “House Trained” or “Not House Trained”
+    g. Energy (required)
+    <li>Shows either:
+    <li>“Sedentary Energy”
+    <li>“Low Energy”
+    <li>“Medium Energy”
+    <li>“High Energy”
+    <li>“Very High Emergy”
+    h. Pet Description (optional)
+    <li>May or may not contain text
+    i. Medical status 
+    <li>May or may not contain text
+    </td>
   </tr>
   <tr>
     <th>Actual Result</th>
-    <td></td>
+    <td> As expected</td>
   </tr>
   <tr>
     <th>Changes Made</th>
-    <td></td>
+    <td>Fixed database issue where medium energy would be the default for the database. Also fixed off by one error with breed.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Chat button click</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Tap on chat button</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Receive the following alert: “This chat button has no functionality. It serves to emulate what potential adopters see.”</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Fail initially, loads up a chat or creates a new one. Had to add the prompt to the alert.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>
+      Tap on Heart Icon Test
+    </td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Tap on heart icon</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Receive the following alert: “This heart button has no functionality. It serves to emulate what potential adopters see.”</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Fail initially, unhandled promise error. Fixed error and added prompt.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>
+      Add a pet
+    </td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: add a dog
+      <ol>
+        <li>Click add a dog button</li>
+        <li>Fill out all information until it says add pet</li>
+        <li>Click add pet</li>
+      </ol>
+      Case 2: add a cat
+      <ol>
+        <li>Click add a dog button</li>
+        <li>Fill out all information until it says add pet</li>
+        <li>Click add pet</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: a new dog is seen in dogs</br>
+        Case 2: a new cat is seen in cats
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal shelter Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Add a pet</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Click add a pet</li>
+        <li>Fill out all the information for each pet until the screen “Add photos”</li>
+        <li>Click the back arrow in the top left corner each time until the screen you reach the Animal Shelter Pets screen again</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Actor is able to cycle through screens without any errors</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add shelter pet</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Cancel button test</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    Hit the cancel button on the following screens:
+      <ol>
+        <li>Pet’s name</li>
+        <li>Pet’s birthday</li>
+        <li>Pet’s gender</li>
+        <li>Select all breeds</li>
+        <li>Pet’s weight</li>
+        <li>Pet’s price</li>
+        <li>Friendly with</li>
+        <li>Housetrained</li>
+        <li>Medical status</li>
+        <li>Pet description</li>
+        <li>Add photos</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Navigates to animal shelter pets page</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Add Pet</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Validate proper fields are filled out before being able to continue</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: populate the following pages and hit continue:
+      <ol>
+        <li>Pet’s name </li>
+        <li>Pet’s birthday</li>
+        <li>Pet’s gender</li>
+        <li>Select all breeds</li>
+        <li>Pet’s weight</li>
+        <li>Pet’s price</li>
+        <li>Friendly with</li>
+        <li>Housetrained</li>
+        <li>Energy Level</li>
+        <li>Medical status</li>
+        <li>Pet description</li>
+        <li>Add photos</li>
+      </ol>
+      Case 2: do not populate any of the following pages and hit continue:
+      <ol>
+        <li>Pet’s name </li>
+        <li>Pet’s birthday</li>
+        <li>Pet’s gender</li>
+        <li>Select all breeds</li>
+        <li>Pet’s weight</li>
+        <li>Pet’s price</li>
+        <li>Friendly with</li>
+        <li>Housetrained</li>
+        <li>Energy Level</li>
+        <li>Medical status</li>
+        <li>Pet description</li>
+        <li>Add photos</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: Page allows you to continue </br>
+      Case 2: 
+      <ol>
+        <li>Page does not go to next page</li>
+        <li>Page does not go to next page</li>
+        <li>Allow continue</li>
+        <li>Allow continue</li>
+        <li>Page does not go to next page</li>
+        <li>Page does not go to next page</li>
+        <li>Allow continue</li>
+        <li>Allow continue</li>
+        <li>Allow continue</li>
+        <li>Allow continue</li>
+        <li>Allow continue</li>
+        <li>Page does not go to next page</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1 and 2 as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Add pet was broken because it allows a pet to be added without any photos. Fixed bug.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a Pet: Pet Birthday</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Birthday can only accept numbers</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>On the birthday try to type in any non-number characte</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Character is not permitted</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add pet: gender</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Toggle selection styling</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>Case 1: click male</br>
+        Case 2: click female
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1 & 2: When the user has selected male, it will be highlighted and the female option will be grayed out.</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As exepcted</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add Pet: Breed Page</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Breed Selection Tests</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: Select 2 breeds </br>
+      Case 2: select 3 breeds</br>
+      Case 3: select 1 breed</br>
+      Case 4: select 4 breeds</br>
+      Case 5: keyword search
+      <li>In search bar type in aff (for dog breeds)</li>
+      Case 6: select no breeds</br>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: 2 breeds pops up in top container</br>
+      Case 2: 3 breeds pop up in top container</br>
+      Case 3: 1 breed pops up in top container</br>
+      Case 4: should be impossible</br>
+      Case 5 “Affenpinscher”, “American Staffordshire Terrier”, and “Staffordshire Bull Terrior” should appear</br>
+      Case 6: continue as expected</br>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add Pet: weight</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Weight Tests</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    Case 1: Weight edge case
+    <ol>
+      <li>Try to enter 1000 into the weight field</li>
+      <li>Try to enter 0 into the weight field</li>
+    </ol>
+    Case 2: alphabetic characters
+    <ol>
+      <li>Try to enter “abc” into the weight field</li>
+      <li>Enter 9.9 into the weight field</li>
+    </ol>
+    Case 3: No characters
+    <ol>
+      <li>Click the continue button</li>
+    </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+    Case 1: 
+    <ol>
+      <li>Should only be able to enter 100</li>
+      <li>Should only be permitted to enter numbers greater than 0/continue with</li>
+    </ol>
+    Case 2: 
+    <ol>
+      <li>Should not be able to access keyboard with alphabetic characters</li>
+      <li>Decimal places should not be permitted</li>
+    </ol>s
+    Case 3: 
+    <ol>
+      <li>Should receive a popup</li>
+    </ol> 
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>All as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>nitially failing due to not scrubbing characters and alphanumeric keyboard being available.
+        Removed alphanumeric keyboard and scrubbed non-numeric characters.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a Pet: price</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Price Input</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: enter the price 100000</br>
+      Case 2: enter price 1000000</br>
+      Case 3: Try entering characters (or decimals into the price)</br>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: permitted</br>
+      Case 2: stops at 100000</br>
+      Case 3: non-numeric characters are not permitted</br>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a pet: medical status</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Medical Status input max length</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>Case 1: try typing more than 69 characters</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: cannot type more than 69 characters</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a pet: Description</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Description input max length</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>Case 1: try typing more than 69 characters</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: cannot type more than 69 characters</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a Pet: Photos</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Photos test</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    Case 1: Six Photos
+      <ol>
+        <li>Add six photos and hit continue</li>
+      </ol>
+      Case 2: Open camera roll
+      <ol>
+        <li>Tap on a photobox</li>
+        <li>Select a photo</li>
+        <li>Click choose</li>
+      </ol>
+      Case 3: Try adding a video
+      <ol>
+        <li>Click on a picture box</li>
+        <li>Click on a video in the camera roll</li>
+        <li>Click on the choose button</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: all photos added and pet added</br>
+      Case 2: photo appears in selected box</br>
+      Case 3: nothing happens to the picture box</br>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>All as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Add a Pet/Animal Shelter Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Adding a pet</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: Add a Dog
+      <ol>
+        <li>Click add a Dog in Animal Shelter Pets</li>
+        <li>Enter “Default Dog” for name and click continue</li>
+        <li>Enter pet’s birthday as “01-22-2001” and click continue</li>
+        <li>Click “Male” and continue</li>
+        <li>Select “Akita” and continue</li>
+        <li>Enter in “10” for lbs and continue</li>
+        <li>Enter in “10” dollars and continue</li>
+        <li>Deselect “Cats” and continue</li>
+        <li>Select “No” and continue</li>
+        <li>Select “Sedentary” and continue</li>
+        <li>Type “Med” and continue</li>
+        <li>Type “Pet” and continue</li>
+        <li>Select 6 photos and continue</li>
+      </ol>
+      Case 2: Add a Cat
+      <ol>
+        <li>Click add a Cat in Animal Shelter Pets</li>
+        <li>Enter “Default Dog” for name and click continue</li>
+        <li>Enter pet’s birthday as “01-22-2001” and click continue</li>
+        <li>Click “Male” and continue</li>
+        <li>Select “Siamese” and continue</li>
+        <li>Enter in “10” for lbs and continue</li>
+        <li>Enter in “10” dollars and continue</li>
+        <li>Deselect “Cats” and continue</li>
+        <li>Select “No” and continue</li>
+        <li>Select “Sedentary” and continue</li>
+        <li>Type “Med” and continue</li>
+        <li>Type “Pet” and continue</li>
+        <li>Select 6 photos and continue</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: view and added pet data matches filled in criteria</br>
+      Case 2: view and added pet data matches filled in criteria
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>All as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Chat</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>No Messages</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Look at chat when no messages have been sent</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Screen says “No Messages (wait for someone to reach out)”</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None Required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Chat</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Opening a Chat</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>When you have a message in the inbox, click on the chat</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Chat should open</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Chat</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Scroll Messages</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Have 7 Chats available</li>
+        <li>Scroll list to reveal hidden chats</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Able to scroll to see all messages</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>As expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
   </tr>
 </table>
 </br >
@@ -1561,139 +2334,7 @@ or liking a pet.
   </tr>
   <tr>
     <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
     <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td>
-      <ol>
-        <li></li>
-        <li></li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td>
-      <ol>
-        <li></li>
-        <li></li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td>
-      <ol>
-        <li></li>
-        <li></li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td>
-      <ol>
-        <li></li>
-        <li></li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
   </tr>
   <tr>
     <th>Actual Result</th>
