@@ -2,23 +2,23 @@
 
 **Joseph Kaufman**<br />
 **Computer Systems and Information Sciences**<br />
-**Prof. Henderson**<br />
+**Professor Henderson**<br />
 **May 2023**<br />
 
 ## Terms of Use
 By using this document you acknowledge that you may not publish the source code or modify the document without 
-consent from Joseph Kaufman. Professor's are permitted to use the demo, UI screenshots, or run the app.
+consent from Joseph Kaufman. Professor's are permitted to use the demo, UI screenshots, and run the app.
 They can view the source code themselves for academic purposes, but this information is considered confidential.
 
 ## I. Statement of Purpose
-In the ideal world, potential adopters could adopt a cat or a dog without the concept 
+In the ideal world, potential adopters could adopt a cat or a dog without the idea 
 of an animal they don’t choose being euthanized. However, this is not the case. Around 
 1.5 million animals are put down in shelters each year. Many of these animals are 
 capable of being a fantastic pet, but shelters are full and need to make room for 
-incoming animals. In order to combat this, I propose that a pet adoption app is 
-created that is catered towards younger generations. With an ever increasing size 
+incoming animals. In order to combat this, I created a pet adoption app that is 
+is catered towards younger generations. With an ever increasing size 
 of the internet and the popularity of apps like Tik Tok, this generation is not 
-being accounted for as much on the adoption scene. Tik Tok has approximately 
+being accounted for on the adoption scene. Tik Tok has approximately 
 [100 million](https://www.nbcnews.com/politics/congress/tiktok-now-150-million-active-users-us-ceo-tell-congress-rcna75607) 
 regular American users. The pet adoption app will help drive demand by 
 showing animals in ways that are addicting and easy to learn. Even though animal 
@@ -30,10 +30,10 @@ modest numbers.
 #### Figma
 [Figma](https://www.figma.com/) is powerful software used to create elegant user interfaces. It is used by Airbnb, Spotify, Uber, and many more 
 [companies](https://8designers.com/blog/what-big-companies-use-figma#:~:text=It's%20no%20wonder%20companies%20like,for%20businesses%20of%20all%20sizes.).
-Figma is used by dragging and dropping layers onto a screen. This
+It is used by dragging and dropping layers onto a screen. This
 simplicity of use enabled me to develop a user interface very rapidly.
 #### Principles
-UX design follows a few [key principles](https://uxplanet.org/mobile-ux-design-key-principles-dee1a632f9e6):
+Mobile UX design follows a few [key principles](https://uxplanet.org/mobile-ux-design-key-principles-dee1a632f9e6):
 1. Simplicity
 2. Make Buttons [42-72 pixels](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/#:~:text=The%20highest%20accuracy%20was%20found,the%20middle%20of%20the%20range.)
 3. Place Buttons [Near Thumb](https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php)
@@ -48,7 +48,7 @@ match with and only shows profiles within their preferences. Bumble and Hinge ha
 which can range from fun questions to lifestyle questions.
 #### Swiping
 Swiping is a staple of dating apps popularized by Tinder.
-A user is shown another user's profile. Here they have the choose to either swipe left or swipe 
+A user is shown another user's profile. Here they have the choice to either swipe left or swipe 
 right. Swiping left hides the profile. Swiping right likes the profile.
 #### Matching
 If two users swipe right on each other's profile, they match. The app will notify users and 
@@ -61,7 +61,7 @@ On the app, [only women are allowed to start chats](https://bumble.com/en/help/h
 #### Elo Rating
 The first algorithm that dating apps employ is called the Elo Rating.
 [Elo Ratings](https://www.chess.com/terms/elo-rating-chess) were originally created to show the rankings of chess players.
-The higher the elo rating the higher the chance of them beating their opponent.
+The higher the elo rating, the higher the chance of them beating their opponent.
 On dating apps, these scores are used to determine the [chances of being swiped right on](https://www.theverge.com/2019/3/15/18267772/tinder-elo-score-desirability-algorithm-how-works).
 In other terms, it is an attractiveness rating. The goal of the app is to get the user
 hooked as soon as possible. They show the user the most attractive users on the platform,
@@ -75,7 +75,9 @@ They serve as predictive algorithms that look at your swipe history and who simi
 liked in the past. Let's use John and Greg to help explain.
 * John likes Sarah, Jane, and Leah.
 * Greg likes Sarah and Jane. 
-Who is should Greg be shown next? Greg should be shown Leah. 
+* Who is should Greg be shown next? 
+
+Greg should be shown Leah. 
 Although similarity algorithms are more complex, this helps give a foundation for how they operate.
 
 ### **Petfinder**
@@ -87,24 +89,24 @@ The ideal language for this application would be:
 * 1. Multiplatform
 * 2. Low Learning Curve
 * 3. Performant
-* 4. Size
+* 4. Small Size
 #### Angular Mobile UI
-A [Google language](https://angular.io/) that is adaptable and multiplatform. However, it is a bit clunkier on the size
-and its learning curve is fairly high so this is not a good option for the project.
+A [Google language](https://angular.io/) that is adaptable and multiplatform. However, it is a bit clunkier in size
+and its learning curve is fairly high. This may not be a good option for the project.
 #### Swift
 [Swift](https://swift.org/) is an easy to learn programming language created by Apple. 
 It is compatible with IOS devices, but lacks the ability to be cross platform. There are better options out there
 than Swift.
 #### Vue
-[Vue](https://vuejs.org/) is a Javascript framework that is [lightweight, quick](https://jelvix.com/blog/js-frameworks-is-vuejs-better-than-react#:~:text=Vue%20is%20faster%20and%20smaller,therefore%2C%20finding%20hires%20is%20faster.) and cross platform. 
-However, it lacks a large amount of documentation and libraries for more complex apps. 
+[Vue](https://vuejs.org/) is a Javascript framework that is [lightweight, quick](https://jelvix.com/blog/js-frameworks-is-vuejs-better-than-react#:~:text=Vue%20is%20faster%20and%20smaller,therefore%2C%20finding%20hires%20is%20faster.), and cross platform. 
+However, it lacks a large amount of documentation and libraries.
 #### React Native
-React Native seems like the perfect compromise between speed, performance, learning curve, and size. It is relatively lightweight, fairly perfomant, cross platform, and I have backround in React which will make this slightly easier to use than the other frameworks.
-### **Common Mobile Databases**[label](https://sqlite.org/index.html)
+React Native seems like the perfect compromise between speed, performance, learning curve, and size. It is relatively lightweight, fairly perfomant, cross platform, and I have backround in React. This will make it slightly easier to use than the other frameworks.
+### **Common Mobile Databases**
 #### SQLite
-[A simplified version of SQL](https://sqlite.org/index.html) catering to Mobile apps. It has the basic features of SQL, but information is stored locally on a mobile app. The datatypes are simplified to [NULL, INTEGER, REAL, TEXT, and BLOB](https://www.sqlite.org/datatype3.html). With Expo this is not compatible because Expo is a cross-platform compiler that is loaded through the cloud. Each time the app reloads the database for the app itself will reload.
+[A simplified version of SQL](https://sqlite.org/index.html) catering to Mobile apps. It has the basic features of SQL, but information is stored locally. The datatypes are simplified to [NULL, INTEGER, REAL, TEXT, and BLOB](https://www.sqlite.org/datatype3.html). With Expo this is not compatible because Expo is a cross-platform compiler that is loaded through the cloud. Each time the app reloads the database for the app itself will reload.
 #### Firebase
-[Google database](https://firebase.google.com/) that offers a free server and database through the cloud. It is a NoSQL solution and simplifies the process of conncecting servers and a backend. Some functionality is highly limited, especially in regards to quering. Another big issue is in regards to the free services running out when the app hits a certain usage level. Another major issue with firebase is that it cannot be converted over to SQL easily. However, due to it's ease of use and free/quick set up this is the best free compromise.
+[Google database](https://firebase.google.com/) that offers a free server and database through the cloud. It is a NoSQL solution and simplifies the process of conncecting servers and a backend. Some functionality is highly limited, especially in regards to querying. Another big issue is in regards to the free services running out when the app hits a certain usage level. Another major issue with firebase is that it cannot be converted over to SQL easily. However due to it's ease of use and free quick set up, this is the best  compromise.
 
 ### Cross-Platform Development
 For applications it has become more common place to create a single application that can be used on multilpe 
@@ -112,12 +114,12 @@ operating systems. This can [save costs](https://www.vizteck.com/post/cross-plat
 languages. There are some drawbacks to this. Although some languages are relatively universal, [native
 functionalities are not](https://www.appschopper.com/blog/pros-cons-cross-platform-mobile-app-development/). These need to be accounted for in addition to your code itself. This can involve
 [permissions](https://docs.expo.dev/guides/permissions/) or different calls to native functionalities with different commands depending on operating system.
-This can leave issues only discovered during testing. 
+This can leave issues that might only discovered during testing. 
 
 [IOS](https://www.apple.com/ios/ios-16/) is Apple's mobile operating system and [Android](https://www.android.com/) is Google's mobile operating system. Each of these
-systems have their own app stores. IOS is a little harder to get an app. The app is required to 
+systems have their own app stores. IOS is a little harder to get in the app store. The app is required to 
 be cross-compaptible with all of Apple's mobile devices including their Ipads. Apple also has a 
-[strict review process](https://developer.apple.com/ios/submit/) that makes it much harder to get into the app store. 
+[strict review process](https://developer.apple.com/ios/submit/) that may take months to pass. 
 Google is [much easier to upload apps to and it requires a one-time paid account](https://support.google.com/googleplay/android-developer/answer/9859152?hl=en).
 
 ## III. Project Languages, Software, and Hardware
@@ -138,7 +140,7 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 * **Google Firebase**
   * [Firestore Database](https://firebase.google.com/docs/firestore): free database hosted hosted through the cloud.
 ### Additional Software Needed
-* [Expo Go](https://expo.dev/client): mobile IOS app that connects to Expo to loads compiled code through cloud.
+* [Expo Go](https://expo.dev/client): mobile IOS app that connects to Expo to load compiled code through cloud.
 * [Expo](https://expo.dev/): additional software that enables native development and compilation without native code.
 ### Hardware
 * Iphone 11 (Mac OS)
@@ -786,7 +788,8 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 ## V. Project Implementaiton, Description, and Explanation
 ### Sign Up Page
 #### Implementation
-(Sign Up Page Screenshot Here)
+(Sign Up Page Screenshot and Source Code)
+![plot](./ReadMeAssets/SignUp.jpg)
 #### Description
 Sign Up page allows adopters and animals shelters to create accounts.
 #### Explanation
@@ -794,7 +797,8 @@ The page is relatively straight forward. Both screens are relatively the same ex
 
 ### Log In Page
 #### Implementation
-(Log In Page Screenshot)
+(Log In Page Screenshot and Source Code)
+![plot](./ReadMeAssets/LogIn.jpg)
 #### Description
 Users can log in by entering their email and password. If the account exists then they will be pressented with the Animal Shelter Pets screen or the Find Pets screen depending on their permissions.
 #### Explanation
@@ -802,7 +806,8 @@ This page is key in storing user information and assigning them to their proper 
 
 ### Find Pets Page
 #### Implementation
-(Screenshot)
+(Screenshot and Source Code)
+![plot](./ReadMeAssets/FindPets.jpg)
 #### Description
 Potential adopters will be presented with pets they can choose from here.
 #### Explanation
@@ -812,7 +817,8 @@ At the top right of the pet card there are picture progress dots. They show whic
 
 ### Filter Pets Page
 #### Implementation
-(Screenshot)
+(Screenshot and Source Code)
+![plot](./ReadMeAssets/Filter.jpg)
 #### Description
 Users can filter what pets they see based upon certain criteria.
 #### Explanation
@@ -831,7 +837,7 @@ By tapping on various buttons the user can select what criteria they would like 
 
 ### Liked Pets Page
 #### Implementation
-(Screenshhot)
+(Screenshot and Source Code)
 #### Description
 After a pet is liked, they will be able to see it in their liked pets page.
 #### Explanation
@@ -842,7 +848,7 @@ search.
 
 ### Messaging Page
 #### Implementation
-(Screenshot)
+(Screenshot and Source Code)
 #### Description
 Users and animals shelters are able to send messages back and forth.
 #### Explanation
@@ -852,7 +858,7 @@ A user has a list of recently liked pets where they can start chats with the pet
 
 ### Animal Shelter Pets Page
 #### Implementation
-(Screenshot)
+(Screenshot and Source Code)
 #### Description
 Animal Shelters will be able to tap between a dogs and cats page showing all of their pets.
 If they tap on a specific pet, they will be able to see a preview of that pet. Animal shelters can also add pets from this page.
@@ -862,7 +868,7 @@ to see all of their pets.
 
 ### Add Pet Screens
 #### Implementation
-(Screenshot)
+(Screenshot and Source Code)
 #### Description
 Animal Shelters are able to add a new pet with specific information relating to the pet.
 #### Explanation
@@ -872,7 +878,8 @@ six photos of the pet.
 
 ### Pet Preview (Liked Pets and Animal Shelter Pets)
 #### Implementation
-(Screenshot)
+![plot](/ReadMeAssets/PreviewPet.jpg)
+[See Source Code](.)
 #### Description
 When a user clicks on a pet it will display the pet's information.
 #### Explanation
@@ -2309,39 +2316,6 @@ and helped to verify that everything is working as it should be.
   <tr>
     <th>Changes Made</th>
     <td>None needed</td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td>
-      <ol>
-        <li></li>
-        <li></li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
   </tr>
 </table>
 </br >
