@@ -827,36 +827,685 @@ Users will be able to filter pets by:
 * Coat
 * Friendly with dogs, cats, kids
 * Housetrained Status
+
 By tapping on various buttons the user can select what criteria they would like to set for a pet they are searching for.
 
 ### Liked Pets Page
 #### Implementation
 (Screenshhot)
 #### Description
-After a pet is added
+After a pet is liked, they will be able to see it in their liked pets page.
 #### Explanation
+Inside this page, a user can start messaging shelters, review information on their liked pets,
+and unlike the pets. This information is vital in the decision process of whether or not
+the pet will be a fit in a home. This gives users the opportunity to unsave a pet to narrow down their
+search.
 
 ### Messaging Page
 #### Implementation
+(Screenshot)
 #### Description
+Users and animals shelters are able to send messages back and forth.
 #### Explanation
+Users are able to tap on certain chats where they can send messages. Once inside of the chat they can
+see previous messages. Animal Shelters are not permitted to start chats, but potential adopters are.
+A user has a list of recently liked pets where they can start chats with the pets.
 
 ### Animal Shelter Pets Page
 #### Implementation
+(Screenshot)
 #### Description
+Animal Shelters will be able to tap between a dogs and cats page showing all of their pets.
+If they tap on a specific pet, they will be able to see a preview of that pet. Animal shelters can also add pets from this page.
 #### Explanation
+Animal shelters can see all of their pets on this screen. They can also tap and scroll around the page
+to see all of their pets. 
 
 ### Add Pet Screens
 #### Implementation
+(Screenshot)
 #### Description
+Animal Shelters are able to add a new pet with specific information relating to the pet.
 #### Explanation
+They will be able to tap through each screen after adding required information.
+After they have entered all the required information, they will be asked to upload
+six photos of the pet.
 
 ### Pet Preview (Liked Pets and Animal Shelter Pets)
 #### Implementation
+(Screenshot)
 #### Description
+When a user clicks on a pet it will display the pet's information.
 #### Explanation
+A user will be able to see everything as is displayed
+when it is in a pet card. The same funcitonality will
+be present except for swiping aspects. This feature
+is offered to shelters and regular users. However, 
+animal shelter's buttons will not work for chatting
+or liking a pet.
 
 ## VI. Test Plan
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Log In</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Iphone suggest email upon textbox tap</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    <ol>
+      <li>Sign in with the email “josephandrewkaufman@gmail.com” and password “password”.</li>
+      <li>Tap on either the email or password textbox</li>
+      <li>Iphone’s password manager should popup with suggested passwords</li>
+      <li>Find the email “josephandrewkaufman@gmail.com” and tap it</li>
+      <li>Use FaceID</li>
+    </ol>
+</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Textboxes are populated with the email “josephandrewkaufman@gmail.com” and password “password”.</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Log In</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Password Hide and Unhide</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td><ol>
+    <li>Enter “Password123” into the password textbox</li>
+    <li>Tap on the Eye icon</li>
+    </ol></td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      <ol> 
+        <li>Eye icon has strikethrough</li> 
+        <li>The password “Password123” is visible in the textbox</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Log In</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Invalid Account Credentials</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Type in the email “josephandrewkaufman@gmail.com”</li>
+        <li>Type in the password “Password”</li>
+        <li>Click the  Log In button</li>  
+      </ol>  
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Alert Popup: “Invalid credentials: please try again”</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Log In & Animal Shelter</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Logging in with Animal Shelter Account yields Animal Shelter Page</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Enter the email “josephandrewkaufman@gmail.com”</li>
+        <li>Enter the password “password”</li>
+        <li>Click Log In</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>A page with a similar format appears: (Screenshot 1)</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected (Screenshot 2)</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Log In & Find Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Logging in with Regular Account yields Find Pets Page</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Enter the email “test@gmail.com”</li>
+        <li>Enter the password “1234password”</li>
+        <li>Click Log In</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>A page with a similar format appears: (Screenshot 3)</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected: (Screenshot 3)</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None Required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Sign Up</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
 
 ## VII. Test Results
 
