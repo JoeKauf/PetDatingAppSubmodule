@@ -4,8 +4,8 @@ export const addPetSlice = createSlice({
   name: "userAuth",
   initialState: {
       isDog: true,
-      name: 'Default name',
-      dob: '01-22-2001',
+      name: '',
+      dob: '',
       isMale: true,
       breeds: [],
       weight: '10',
@@ -15,8 +15,8 @@ export const addPetSlice = createSlice({
       isKidFriendly: true,
       isHouseTrained: false,
       activityLevel: 'Medium',
-      medicalStatus: 'Med',
-      petDescription: 'Pet',
+      medicalStatus: '',
+      petDescription: '',
       photos: {
         one: '',
         two: '',

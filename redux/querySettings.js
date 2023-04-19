@@ -18,7 +18,7 @@ export const dogBreedSlice = createSlice({
             },
             {
                 value: "Young",
-                isSelected: false,
+                isSelected: true,
             },
             {
                 value: "Adult",
@@ -49,11 +49,11 @@ export const dogBreedSlice = createSlice({
         gender: {
             cat:
             {
-                male: false,
+                male: true,
                 female: true,
             },
             dog: {
-                male: false,
+                male: true,
                 female: true,
             }
         },
@@ -76,7 +76,7 @@ export const dogBreedSlice = createSlice({
             },
             {
                 value: "Medium",
-                isSelected: false,
+                isSelected: true,
             },
             {
                 value: "Long",
@@ -98,7 +98,7 @@ export const dogBreedSlice = createSlice({
             },
             {
                 value: "25-60 lbs",
-                isSelected: false,
+                isSelected: true,
             },
             {
                 value: "60+ lbs",
@@ -111,7 +111,7 @@ export const dogBreedSlice = createSlice({
                 },
                 {
                     value: "5-12 lbs",
-                    isSelected: false,
+                    isSelected: true,
                 },
                 {
                     value: "12+ lbs",
