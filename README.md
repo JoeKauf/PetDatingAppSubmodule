@@ -82,7 +82,7 @@ Although similarity algorithms are more complex, this helps give a foundation fo
 
 ### **Petfinder**
 [Petfinder](https://www.petfinder.com/) is a pet adoption website that has been around since 1996.
-It is the most poopular pet adoption app and has 14,000 animal shelters throughout North America. They are owned by Purina and make revenue via ads placed on their website. The main premise is to allow users to look up animals on the site. They can search by breed, age, energy, coat, location, and a variety of other factors. 
+It is the most popular pet adoption app and has 14,000 animal shelters throughout North America. They are owned by Purina and make revenue via ads placed on their website. The main premise is to allow users to look up animals on the site. They can search by breed, age, energy, coat, location, and a variety of other factors. 
 
 ### **Common Mobile Languages**
 The ideal language for this application would be:
