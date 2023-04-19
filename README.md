@@ -788,8 +788,8 @@ Google is [much easier to upload apps to and it requires a one-time paid account
 ## V. Project Implementaiton, Description, and Explanation
 ### Sign Up Page
 #### Implementation
-(Sign Up Page Screenshot and Source Code)
-![plot](./ReadMeAssets/SignUp.jpg)
+![plot](./ReadMeAssets/SignUp.jpg) </br>
+[Source Code](./components/SignedInPages/SignUp.jsx)
 #### Description
 Sign Up page allows adopters and animals shelters to create accounts.
 #### Explanation
@@ -797,8 +797,8 @@ The page is relatively straight forward. Both screens are relatively the same ex
 
 ### Log In Page
 #### Implementation
-(Log In Page Screenshot and Source Code)
-![plot](./ReadMeAssets/LogIn.jpg)
+![plot](./ReadMeAssets/LogIn.jpg) </br>
+[Source Code](./components/SignedInPages/LogIn.jsx)
 #### Description
 Users can log in by entering their email and password. If the account exists then they will be pressented with the Animal Shelter Pets screen or the Find Pets screen depending on their permissions.
 #### Explanation
@@ -806,8 +806,8 @@ This page is key in storing user information and assigning them to their proper 
 
 ### Find Pets Page
 #### Implementation
-(Screenshot and Source Code)
-![plot](./ReadMeAssets/FindPets.jpg)
+![plot](./ReadMeAssets/FindPets.jpg) </br>
+[Source Code](./components/FindPets/)
 #### Description
 Potential adopters will be presented with pets they can choose from here.
 #### Explanation
@@ -817,8 +817,8 @@ At the top right of the pet card there are picture progress dots. They show whic
 
 ### Filter Pets Page
 #### Implementation
-(Screenshot and Source Code)
-![plot](./ReadMeAssets/Filter.jpg)
+![plot](./ReadMeAssets/Filter.jpg) </br>
+[Source Code](./components/Settings/)
 #### Description
 Users can filter what pets they see based upon certain criteria.
 #### Explanation
@@ -837,7 +837,8 @@ By tapping on various buttons the user can select what criteria they would like 
 
 ### Liked Pets Page
 #### Implementation
-(Screenshot and Source Code)
+![plot](./ReadMeAssets/LikedPets.jpg) </br>
+[Source Code](./components/ChatAndLikes/LikedPets.jsx)
 #### Description
 After a pet is liked, they will be able to see it in their liked pets page.
 #### Explanation
@@ -848,7 +849,8 @@ search.
 
 ### Messaging Page
 #### Implementation
-(Screenshot and Source Code)
+![plot](./ReadMeAssets/Messages.jpg) </br>
+[Source Code](./components/ChatAndLikes/ChatWithPets.jsx)
 #### Description
 Users and animals shelters are able to send messages back and forth.
 #### Explanation
@@ -858,7 +860,8 @@ A user has a list of recently liked pets where they can start chats with the pet
 
 ### Animal Shelter Pets Page
 #### Implementation
-(Screenshot and Source Code)
+![plot](./ReadMeAssets/AnimalShelterPets.jpg) </br>
+[Source Code](./components/AnimalShelterComponents/Animals)
 #### Description
 Animal Shelters will be able to tap between a dogs and cats page showing all of their pets.
 If they tap on a specific pet, they will be able to see a preview of that pet. Animal shelters can also add pets from this page.
@@ -868,7 +871,8 @@ to see all of their pets.
 
 ### Add Pet Screens
 #### Implementation
-(Screenshot and Source Code)
+![plot](./ReadMeAssets/Add%20a%20Pet.jpg) </br>
+[Source Code](./components/AnimalShelterComponents/AddPet/PetName.jsx)
 #### Description
 Animal Shelters are able to add a new pet with specific information relating to the pet.
 #### Explanation
@@ -878,8 +882,8 @@ six photos of the pet.
 
 ### Pet Preview (Liked Pets and Animal Shelter Pets)
 #### Implementation
-![plot](/ReadMeAssets/PreviewPet.jpg)
-[See Source Code](.)
+![plot](./ReadMeAssets/PreviewPet.jpg) </br>
+[Source Code](./components/ChatAndLikes/LikedPets.jsx)
 #### Description
 When a user clicks on a pet it will display the pet's information.
 #### Explanation
