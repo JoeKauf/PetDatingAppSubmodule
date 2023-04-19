@@ -1,4 +1,4 @@
-# Pet Dating App
+# Pet Friends
 
 **Joseph Kaufman**<br />
 **Computer Systems and Information Sciences**<br />
@@ -6,10 +6,9 @@
 **May 2023**<br />
 
 ## Terms of Use
-Joseph Kaufman is the creator of this application and any use, 
-copying of source code, or modificaiton of the document without 
-consent is prohibited. Professor's may use the demo, UI screenshots, or run the app.
-They are prohibited from sharing the source code.
+By using this document you acknowledge that you may not publish the source code or modify the document without 
+consent from Joseph Kaufman. Professor's are permitted to use the demo, UI screenshots, or run the app.
+They can view the source code themselves for academic purposes, but this information is considered confidential.
 
 ## I. Statement of Purpose
 In the ideal world, potential adopters could adopt a cat or a dog without the concept 
