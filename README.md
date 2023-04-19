@@ -8,7 +8,8 @@
 ## Terms of Use
 By using this document you acknowledge that you may not publish the source code or modify the document without 
 consent from Joseph Kaufman. Professor's are permitted to use the demo, UI screenshots, and run the app.
-They can view the source code themselves for academic purposes, but this information is considered confidential.
+They can view the source code themselves for academic purposes, but this information is considered confidential. 
+This is in order to protect user's personal data from being breached.
 
 ## I. Statement of Purpose
 In the ideal world, potential adopters could adopt a cat or a dog without the idea 
