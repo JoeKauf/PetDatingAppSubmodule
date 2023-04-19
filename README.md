@@ -2326,47 +2326,24 @@ and helped to verify that everything is working as it should be.
 
 ## VIII. Challenges Overcome
 ### Database
-* SQLite does not work with expo
-* had to use cloud database instead
+* SQLite does not work with Expo. Used a cloud database instead. This was severly limited due to not having a budget.
 ### Timframe
-* given 6 months to complete while working 20 hours a week
+* Very rapid development under 6 months. 
 ### Location Services
-* Native application issues
-* Multiple Libraries tried
-* Permissions/Expo was the issue
+Due to issues regarding native applications, it made it hard to use location services. Dug around in 12 different libraries before I realized that permissions may be the real issue. Not a code problem, but a permissions problem on my phone.
 ### New Programming Language
-* first time creating a mobile app for IOS
-* first time using React Native
+First time using React Native and it was also my first time creating a mobile app. These presented fun challenges that I never knew I would enjoy.
 
 ## IV. Future Enhancements
-### Functionality Tutorial included in Onboarding Process
-### UI Redesign/Revamp
-* Filtering has multiple button types
-* May move undo-action button off of pet cards
-* Keep main navbar at bottom at all times
-* Pet card medical status and description are supposed to be multiline
-### Location Services
-* Full functionality for filtering
-* Dropdowns for account creation of Animal Shelter
 ### Chat
-* Add number of messages notification
-* Read messages have different appearance
-* Sort messages by unread/last sent
-* Push notifications
-* Block user
-* delete chat
-### Add Pet
-* Add Coat was initially missed
-### Animal Shelter
-* Add analytics for pets (show swipes, statistics, and desirability)
-* Add ability to edit pets
-* Add mark as adopted feature
+Add unread message count to chat. Also enable push notifications for messaging.
+### Animal Shelter Pets
+Add analytics, edit pets, and marking pets as adopted.
 ### Database
-* Firebase does not permit compound inequality queries. Find and replace it with one that supports (likely paid).
-### Algorithms
-* Add Elo Rating
-* Add Similarity Rating
+Switch out Firebase for a more advanced and adaptable language. Likely a paid SQL server.
+### Implement Algorithms
+Implement dating app algorithms that would make use easier and more natural.
 ### Liked Pets
-* Share liked pets and poll friends for their favorite pet
+Sharing pets with friends and also asking friends to rank their favorite pet.
 ### Find Pets
-* Report a user feature
+Reporting users and swiping tutorials.
