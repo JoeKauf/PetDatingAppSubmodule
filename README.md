@@ -1066,7 +1066,560 @@ or liking a pet.
   </tr>
   <tr>
     <th>Test</th>
+    <td>Cannot create an account with the same email.</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>Case 1: Create an Animal Shelter with the same email as an existing account
+      <ol>
+        <li>Input shelter name as “John Doe”</li>
+        <li>Input email as “josephandrewkaufman@gmail.com”</li>
+        <li>Input password as “test”</li>
+        <li>Hit the Next Button</li>
+        <li>Input street address as “Address”</li>
+        <li>Input country as test</li>
+        <li>Input zip code as 1234</li>
+        <li>Click Sign Up</li>
+      </ol>
+      Case 2: Create an Animal Shelter with the same email, but different case as an existing account
+      <ol>
+        <li>Input shelter name as “John Doe”</li>
+        <li>Input email as “Josephandrewkaufman@gmail.com”</li>
+        <li>Input password as “test”</li>
+        <li>Hit the Next Button</li>
+        <li>Input street address as “Address”</li>
+        <li>Input country as test</li>
+        <li>Input zip code as 1234</li>
+        <li>Click Sign Up</li>
+      </ol>
+      Case 3: Create a Regular User with the same email as an existing account
+      <ol>
+        <li>Input shelter name as “John Doe”</li>
+        <li>Input email as “josephandrewkaufman@gmail.com”</li>
+        <li>Input password as “test”</li>
+      </ol>
+      Case 4: Create an Regular User with the same email, but different case as an existing account
+      <ol>
+        <li>Input shelter name as “John Doe”</li>
+        <li>Input email as “Josephandrewkaufman@gmail.com”</li>
+        <li>Input password as “test”</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: receive popup “Email is already used, please use a different one.” </br>
+        Case 2: receive popup “Email is already used, please use a different one.”</br>
+        Case 3: receive popup “Email is already used, please use a different one.”</br>
+        Case 4: receive popup “Email is already used, please use a different one.”
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1: receive popup “Email is already used, please use a different one.” </br>
+        Case 2: receive popup “Email is already used, please use a different one.”</br>
+        Case 3: receive popup “Email is already used, please use a different one.”</br>
+        Case 4: receive popup “Email is already used, please use a different one.”
+    </td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Initially failed Cases 2 and 3. Force lowercase on email inputs to prevent overlap due to case differences.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Sign Up</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Sign Up User Should not permit blank fields</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    Case 1: Regular User
+      <ol>
+        <li>Don’t add any information for Sign up</li>
+        <li>Click Sign Up </li>
+      </ol>
+      Case 2: Animal Shelter
+      <ol>
+        <li>Don’t add any information for Sign up</li>
+        <li>Check the button “Register as an Animal Shelter/Breeder”</li>
+        <li>Click Next Button</li>
+        <li>Click Sign Up</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: Nothing happens </br>
+        Case 2: Nothing happens
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1: Nothing happens </br>
+        Case 2: Nothing happens
+    </td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Initially failed Cases 2 and 3. Added statement to prevent error from occurring when text is not found.</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
     <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Sign Up User</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: Regular User
+      <ol>
+        <li>Type “AddUserTest” as name</li>
+        <li>Type “AddUserTest@gmail.com” for email</li>
+        <li>Type “password” for password</li>
+        <li>Click Signup</li>
+      </ol>
+      Case 2: Animal Shelter
+      <ol>
+        <li>Type “AddShelterTest” as name</li>
+        <li>Type “AddShelterTest@gmail.com” for email</li>
+        <li>Type “password” for password</li>
+        <li>Check “Register as an Animal Shelter/Breeder.” box</li>
+        <li>Click Next</li>
+        <li>Type “Address” for address</li>
+        <li>Type “Country” for country</li>
+        <li>Type “1234” for zip code</li>
+        <li>Click Signup</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: show the Find Pets screen </br>
+        Case 2: show the Animal Shelter screen
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1: show the Find Pets screen </br>
+        Case 2: show the Animal Shelter screen</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>Initially Case 2 fail: Firebase error when adding without information in address line 2.
+        Removed bug for when no Address Line 2 is available
+    </td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Password Hide and Unhide</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>
+      Password Hide and Unhide
+    </td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Enter “Password123” into the password textbox</li>
+        <li>Tap on the Eye icon</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      <ol>
+        <li>Eye icon has strikethrough</li>
+        <li>The password “Password123” is visible in the textbox</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Sign Up & Log In</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Sign Up and Log In toggle works</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>Case 1: Tap on Log In Tab </br>
+        Case 2: Tap on Sign up Tab
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>
+      Case 1: Log In Tab is Bolded with Green underline and Sign up is grayed out </br>
+      Case 2:Sign up tab is bolded with Green Underline and Log In is grayed ou
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Same as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None required</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Scroll when pets exceed size of page</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+    Case 1: Dog page
+      <ol>
+        <li>Add four or more pets to the dog page</li>
+        <li>Use your finger to scroll</li>
+      </ol>
+    Case 2: Cat page
+      <ol>
+        <li>Add four or more pets to the dog page</li>
+        <li>Use your finger to scroll to reveal the bottom half of the pets</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: be able to see all of the pets added upon scrolling </br>
+        Case 2: be able to see all of the pets added upon scrolling
+</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1: be able to see all of the pets added upon scrolling </br>
+        Case 2: be able to see all of the pets added upon scrolling
+    </td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pets</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Tap on a pet reveals an overlay/popup window</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: animal shelter dogs
+      <ol>
+        <li>Click on one of the pets</li>
+      </ol>
+      Case 2: animal shelter cats
+      <ol>
+        <li>Click on one of the pets</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1 and 2: Screen should look similar: (Screenshot 4)</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>(Screenshot 5)</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Exit button test</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Click on exit button</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Animal Shelter Pets screen is shown again</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Animal Shelter Pets screen is shown again</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>When a user taps off of the Pet Card at any point, the overlay and the Pet Card will disappear.</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Tap anywhere outside of the Pet Card’s borders (green area depicted below) (Screenshot 6)</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Show animal shelter pets</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Show animal shelter pets</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>Tapping on moves photo and updates progress bar</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      Case 1: Right tap
+      <ol>
+        <li>Tap on right side of pet card photo (make sure not to touch near the info section on the bottom)</li>
+      </ol>
+      Case 2: Left tap
+      <ol>
+        <li>Tap on left side of pet card photo (make sure not to touch near the info section on the bottom)</li>
+      </ol>
+      (Screenshot 7)
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td>Case 1: show next photo and update progress bar to right </br>
+        Case 2: show previous photo and update progress bar to left
+    </td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td>Case 1 & 2 resulted as expected</td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td>None needed</td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td>Animal Shelter Pet Card Overlay</td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>More information when pet is tapped on</td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li>Tap on the pet’s name at the bottom of the pet card</li>
+      </ol>
+      Male or Female (required)
+      <li>Shown and visible with appropriate gender symbol</li>
+      Pet’s breed (required)
+      <li>Shows one or more breeds or the text (mixed)</li>
+      Price (required)
+      <li>A price is shown greater than or equal to $0</li>
+      Weight (required)
+      <li>Any weight above 0 lbs</li>
+      Friendly With (required)
+      <li>Shows Baby, Dog, and Cat icons with either a check or an x next to it</li>
+      House Trained (required)
+      <li>Says “House Trained” or “Not House Trained”</li>
+      Energy (required)
+      <li>Shows either:
+        <li>“Sedentary Energy”</li>
+        <li>“Low Energy”</li>
+        <li>“Medium Energy”</li>
+        <li>“High Energy”</li>
+        <li>“Very High Emergy”</li>
+      </li>
+      Pet Description (optional)
+      <li>May or may not contain text</li>
+      
+      Medical status 
+      May or may not contain text
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td>
+      <ol>
+        <li></li>
+        <li></li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>
+      <ol>
+        <li></li>
+        <li></li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th>Test Steps</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Expected Results</th>
+    <td</td>
+  </tr>
+  <tr>
+    <th>Actual Result</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Changes Made</th>
+    <td></td>
+  </tr>
+</table>
+</br >
+
+<table>
+  <tr>
+    <th>Page</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Test</th>
+    <td>
+      <ol>
+        <li></li>
+        <li></li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <th>Test Steps</th>
@@ -1098,7 +1651,12 @@ or liking a pet.
   </tr>
   <tr>
     <th>Test Steps</th>
-    <td</td>
+    <td>
+      <ol>
+        <li></li>
+        <li></li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <th>Expected Results</th>
@@ -1126,371 +1684,12 @@ or liking a pet.
   </tr>
   <tr>
     <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Expected Results</th>
-    <td</td>
-  </tr>
-  <tr>
-    <th>Actual Result</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Changes Made</th>
-    <td></td>
-  </tr>
-</table>
-</br >
-
-<table>
-  <tr>
-    <th>Page</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Test Steps</th>
-    <td</td>
+    <td>
+      <ol>
+        <li></li>
+        <li></li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <th>Expected Results</th>
