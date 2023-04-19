@@ -884,7 +884,7 @@ is offered to shelters and regular users. However,
 animal shelter's buttons will not work for chatting
 or liking a pet.
 
-## VI. Test Plan
+## VI. Test Plan and Results
 ### Survey/Peer Testing
 The following prompts were used to survey fellow classmates at school. They were given five minutes to play around with the app
 and answer the following questions:
@@ -2347,8 +2347,49 @@ and helped to verify that everything is working as it should be.
 </table>
 </br >
 
-## VII. Test Results
-
 ## VIII. Challenges Overcome
+### Database
+* SQLite does not work with expo
+* had to use cloud database instead
+### Timframe
+* given 6 months to complete while working 20 hours a week
+### Location Services
+* Native application issues
+* Multiple Libraries tried
+* Permissions/Expo was the issue
+### New Programming Language
+* first time creating a mobile app for IOS
+* first time using React Native
 
 ## IV. Future Enhancements
+### Functionality Tutorial included in Onboarding Process
+### UI Redesign/Revamp
+* Filtering has multiple button types
+* May move undo-action button off of pet cards
+* Keep main navbar at bottom at all times
+* Pet card medical status and description are supposed to be multiline
+### Location Services
+* Full functionality for filtering
+* Dropdowns for account creation of Animal Shelter
+### Chat
+* Add number of messages notification
+* Read messages have different appearance
+* Sort messages by unread/last sent
+* Push notifications
+* Block user
+* delete chat
+### Add Pet
+* Add Coat was initially missed
+### Animal Shelter
+* Add analytics for pets (show swipes, statistics, and desirability)
+* Add ability to edit pets
+* Add mark as adopted feature
+### Database
+* Firebase does not permit compound inequality queries. Find and replace it with one that supports (likely paid).
+### Algorithms
+* Add Elo Rating
+* Add Similarity Rating
+### Liked Pets
+* Share liked pets and poll friends for their favorite pet
+### Find Pets
+* Report a user feature
